@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../stylesheets/haiwai_public.css">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/xxl.css">
+
+    <!--[if IE]>
+    <link rel="stylesheet" type="text/css" href="../stylesheets/ie.css">
+    <![endif]-->
+
+    <script>
+        ;!function (doc, win) {
+            "use strict";
+            var fontScale;
+            fontScale = function(){
+                var innerWidth = win.innerWidth;
+                if (!innerWidth) {
+                    return false;
+                }
+                if(innerWidth<=768){
+                    doc.documentElement.style.fontSize = (16 * innerWidth / 320)  + 'px';
+                }else{
+                    doc.documentElement.style.fontSize='16px'
+                }
+            }
+            fontScale();
+            if(win.addEventListener){
+                win.addEventListener('resize', fontScale, false);
+                win.addEventListener('load',fontScale,false);
+            }
+
+        }(document, window);
+    </script>
+</head>
+<body>
+<div class="haiwai_nav">
+    <div class="haiwai_c">
+        <style>
+            #bdcs{ width:150px; overflow:hidden; float:right; margin-top:10px; height:21px;}
+            .bdcs-container .bdcs-search-form-submit{ float:left;}
+            a.public_search{ padding:0px; margin:0px; margin-left:3px; line-height:40px; float:right;}
+        </style>
+        <a target="_blank" class="public_search" href="http://search.haiwainet.cn/?q=%E6%B5%B7%E5%A4%96%E7%BD%91&amp;SearchSubmit.x=0&amp;SearchSubmit.y=0&amp;SearchSubmit=submit">海外网搜索</a>
+        <script type="text/javascript">(function(){document.write(unescape('%3Cdiv id="bdcs"%3E%3C/div%3E'));var bdcs = document.createElement('script');bdcs.type = 'text/javascript';bdcs.async = true;bdcs.src = 'http://znsv.baidu.com/customer_search/api/js?sid=4763610942530243632' + '&plate_url=' + encodeURIComponent(window.location.href) + '&t=' + Math.ceil(new Date()/3600000);var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(bdcs, s);})();
+
+        function getClass(obj,attr)
+        {
+            if(obj.getElementsByClassName)
+            {
+                return obj.getElementsByClassName(attr);
+            }
+            var arr = [];
+            var aEle = obj.getElementsByTagName('*');
+            for(var i = 0, m = aEle.length; i < m; i++)
+            {
+                if(aEle[i].className == attr)
+                {
+                    arr.push(aEle[i]);
+                }
+
+            }
+            return arr;
+
+        }
+
+        (function(){
+            var oSearch=getClass(document,'public_search')[0];
+            oSearch.onclick=function(){
+                var val=document.getElementById('bdcs-search-form-input').value;
+                oSearch.href='http://search.haiwainet.cn/?q='+val+'&SearchSubmit.x=0&SearchSubmit.y=0&SearchSubmit=submit';
+            }
+        })()
+        </script>
+        <span><a href="http://www.haiwainet.cn/" target="_blank">海外网首页</a>｜<a href="http://mobile.haiwainet.cn/GB/456188/index.html" target="_blank">移动客户端</a></span><a href="http://opinion.haiwainet.cn/" target="_blank">评论</a><a href="http://news.haiwainet.cn/" target="_blank">资讯</a><a href="http://finance.haiwainet.cn/" target="_blank">财经</a><a href="http://huaren.haiwainet.cn/" target="_blank">华人</a><a href="http://tw.haiwainet.cn/" target="_blank">台湾</a><a href="http://hk.haiwainet.cn/" target="_blank">香港</a><a href="http://city.haiwainet.cn/" target="_blank">城市</a><a href="http://history.haiwainet.cn/" target="_blank">历史</a><a href="http://bbs.haiwainet.cn/" target="_blank">社区</a><a href="http://v.haiwainet.cn/" target="_blank">视频</a><a href="http://singapore.haiwainet.cn/" target="_blank">新加坡</a><a href="http://de.haiwainet.cn/" target="_blank">德国</a><a href="http://helan.haiwainet.cn/" target="_blank">荷兰</a><a href="http://www.haiwainet.cn/roll/" target="_blank">滚动</a></div>
+</div>
+<div class="main">
+    <h1><a href="http://www.haiwainet.cn/" target="_blank"><img src="../xjp_images/logo.jpg"></a><img src="../xjp_images/logo_c.jpg"></h1>
+    <div class="nav"><a href="javascript:;" target="_blank"> 新西兰新闻</a><a href="javascript:;" target="_blank">新西兰财经</a><a href="javascript:;" target="_blank">新西兰移民留学</a><a href="javascript:;" target="_blank">新西兰旅游</a><a href="javascript:;" target="_blank">社区·公益</a><a href="javascript:;" target="_blank">生活搜索</a><a href="javascript:;" target="_blank">媒体联盟</a></div>
+    <div class="nav-bottom"><span class="l">实时行情</span><ul id="rate"></ul>
+    </div>
+    <h2><img src="../xjp_images/tt.png" ><a href="javascript:;" target="_blank">克里米亚举史节 重现二战战场</a></h2>
+    <div class="topcon">
+        <div class="r">
+            <div class="top">
+                <ul id="weather">
+                </ul>
+            </div>
+            <div class="b">
+                <a href="javascript:;" target="_blank"><i class="icon1"></i>旅游考察</a>
+                <a href="javascript:;" target="_blank"><i class="icon2"></i>旅游考察</a>
+                <a href="javascript:;" target="_blank"><i class="icon3"></i>旅游考察</a>
+                <a href="javascript:;" target="_blank"><i class="icon4"></i>旅游考察</a>
+                <a href="javascript:;" target="_blank"><i class="icon5"></i>旅游考察</a>
+                <a href="javascript:;" target="_blank"><i class="icon6"></i>旅游考察</a>
+                <a href="javascript:;" target="_blank"><i class="icon7"></i>旅游考察</a>
+                <a href="javascript:;" target="_blank"><i class="icon8"></i>旅游考察</a>
+            </div>
+        </div>
+        <div class="l">
+            <div class="slides">
+                <div class="flicking_con"></div>
+                <div class="main_image">
+                    <ul>
+                        <li>
+                            <img src="../xjp_images/w1.jpg">
+                            <div></div>
+                            <p><a href="javascript:;" target="_blank">北京投资九千万引1</a></p>
+                        </li>
+                        <li>
+                            <img src="../xjp_images/w1.jpg">
+                            <div></div>
+                            <p><a href="javascript:;" target="_blank">北京投资九千万引2</a></p>
+                        </li>
+                        <li>
+                            <img src="../xjp_images/w1.jpg">
+                            <div></div>
+                            <p><a href="javascript:;" target="_blank">北京投资九千万引3</a></p>
+                        </li>
+                    </ul>
+                    <a href="javascript:;" class="btn_next" style="display: none"></a>
+                    <a href="javascript:;" class="btn_prev" style="display: none"></a>
+                </div>
+
+            </div>
+        </div>
+        <div class="c">
+            <h4><a href="javascript:;" target="_blank">北京投资九千万引进德国技术保护水源</a></h4>
+            <ul>
+                <li><a href="javascript:;" target="_blank">北京市旅游发展委主任鲁勇任中国残联党组</a></li>
+                <li><a href="javascript:;" target="_blank">北京市旅游发展委主任鲁勇任中国残联党组</a></li>
+                <li><a href="javascript:;" target="_blank">北京市旅游发展委主任鲁勇任中国残联党组</a></li>
+            </ul>
+            <h4><a href="javascript:;" target="_blank">北京投资九千万引进德国技术保护水源</a></h4>
+            <ul>
+                <li><a href="javascript:;" target="_blank">北京市旅游发展委主任鲁勇任中国残联党组</a></li>
+                <li><a href="javascript:;" target="_blank">北京市旅游发展委主任鲁勇任中国残联党组</a></li>
+                <li><a href="javascript:;" target="_blank">北京市旅游发展委主任鲁勇任中国残联党组</a></li>
+                <li><a href="javascript:;" target="_blank">北京市旅游发展委主任鲁勇任中国残联党组</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="ad" id="ad_01"></div>
+    <div class="list1">
+        <div class="r">
+            <div class="d1">
+                <div class="c">
+                    <p><a href="javascript:;" target="_blank">新西兰（New Zealand）是位于太平洋西南部的一个岛国。首都为惠灵顿，最大的城市是奥克兰。这个不缺蓝天与绿草的国度，会带给你无比的热情和生命力。当你置身于斯，伸手在参天巨杉。<i>[详情］</i></a></p>
+                    <div><a href="javascript:;" target="_blank">使馆直通车</a><a href="javascript:;" target="_blank">联系我们</a></div>
+                </div>
+            </div>
+            <div class="d2">
+                <h3><a href="javascript:;" target="_blank">中国驻新西兰使领馆信息栏</a></h3>
+                <div>
+                    <ul>
+                        <li><a href="javascript:;" target="_blank">北京市旅游发展委主任鲁勇任中国残联党组</a></li>
+                        <li><a href="javascript:;" target="_blank">北京市旅游发展委主任鲁勇任中国残联党组</a></li>
+                        <li><a href="javascript:;" target="_blank">北京市旅游发展委主任鲁勇任中国残联党组</a></li>
+                        <li><a href="javascript:;" target="_blank">北京市旅游发展委主任鲁勇任中国残联党组</a></li>
+                        <li><a href="javascript:;" target="_blank">北京市旅游发展委主任鲁勇任中国残联党组</a></li>
+                        <li><a href="javascript:;" target="_blank">北京市旅游发展委主任鲁勇任中国残联党组</a></li>
+                        <li><a href="javascript:;" target="_blank">北京市旅游发展委主任鲁勇任中国残联党组</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="l">
+            <div class="c">
+                <h4><span><a href="javascript:;" target="_blank">新闻动态</a></span><a href="javascript:;" target="_blank" class="m">more</a></h4>
+                <div class="t">
+                    <img src="../xjp_images/xxl_41.png">
+                    <div class="cb">
+                        <h5><a href="javascript:;" target="_blank">中马元首会晤</a></h5>
+                        <p><a href="javascript:;" target="_blank">人民党现任副秘书长将党内会议上提出新的改革措施，给一张“新面孔”。</a></p>
+                    </div>
+                </div>
+                <div class="lt">
+                    <ul>
+                        <li><a href="javascript:;" target="_blank">北京市旅游发展委主任鲁勇任中国残联党组</a></li>
+                        <li><a href="javascript:;" target="_blank">北京市旅游发展委主任鲁勇任中国残联党组</a></li>
+                        <li><a href="javascript:;" target="_blank">北京市旅游发展委主任鲁勇任中国残联党组</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="c">
+                <h4><span><a href="javascript:;" target="_blank">新闻动态</a></span><a href="javascript:;" target="_blank" class="m">more</a></h4>
+                <div class="t">
+                    <img src="../xjp_images/xxl_41.png">
+                    <div class="cb">
+                        <h5><a href="javascript:;" target="_blank">中马元首会晤</a></h5>
+                        <p><a href="javascript:;" target="_blank">人民党现任副秘书长将党内会议上提出新的改革措施，给一张“新面孔”。</a></p>
+                    </div>
+                </div>
+                <div class="lt">
+                    <ul>
+                        <li><a href="javascript:;" target="_blank">北京市旅游发展委主任鲁勇任中国残联党组</a></li>
+                        <li><a href="javascript:;" target="_blank">北京市旅游发展委主任鲁勇任中国残联党组</a></li>
+                        <li><a href="javascript:;" target="_blank">北京市旅游发展委主任鲁勇任中国残联党组</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="c">
+                <h4><span><a href="javascript:;" target="_blank">新闻动态</a></span><a href="javascript:;" target="_blank" class="m">more</a></h4>
+                <div class="t">
+                    <img src="../xjp_images/xxl_41.png">
+                    <div class="cb">
+                        <h5><a href="javascript:;" target="_blank">中马元首会晤</a></h5>
+                        <p><a href="javascript:;" target="_blank">人民党现任副秘书长将党内会议上提出新的改革措施，给一张“新面孔”。</a></p>
+                    </div>
+                </div>
+                <div class="lt">
+                    <ul>
+                        <li><a href="javascript:;" target="_blank">北京市旅游发展委主任鲁勇任中国残联党组</a></li>
+                        <li><a href="javascript:;" target="_blank">北京市旅游发展委主任鲁勇任中国残联党组</a></li>
+                        <li><a href="javascript:;" target="_blank">北京市旅游发展委主任鲁勇任中国残联党组</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="c">
+                <h4><span><a href="javascript:;" target="_blank">新闻动态</a></span><a href="javascript:;" target="_blank" class="m">more</a></h4>
+                <div class="t">
+                    <img src="../xjp_images/xxl_41.png">
+                    <div class="cb">
+                        <h5><a href="javascript:;" target="_blank">中马元首会晤</a></h5>
+                        <p><a href="javascript:;" target="_blank">人民党现任副秘书长将党内会议上提出新的改革措施，给一张“新面孔”。</a></p>
+                    </div>
+                </div>
+                <div class="lt">
+                    <ul>
+                        <li><a href="javascript:;" target="_blank">北京市旅游发展委主任鲁勇任中国残联党组</a></li>
+                        <li><a href="javascript:;" target="_blank">北京市旅游发展委主任鲁勇任中国残联党组</a></li>
+                        <li><a href="javascript:;" target="_blank">北京市旅游发展委主任鲁勇任中国残联党组</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ad" id="ad_01"></div>
+    <div class="list2">
+        <h3 class="htitle"><a href="javascript:;">旅游考察</a></h3>
+        <div class="c">
+            <div class="r">
+                <ul>
+                    <li>
+                        <img src="../xjp_images/xxl_53.jpg">
+                        <div>
+                            <h4><a href="javascript:;" target="_blank">美国近5亿美元租俄罗斯飞船座位</a></h4>
+                            <p><a href="javascript:;" target="_blank">目前美国在载人航天方面落后于俄罗斯，波音和X空间两个公司正在研究载人飞船技术。</a></p>
+                            <span></span>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="../xjp_images/xxl_53.jpg">
+                        <div>
+                            <h4><a href="javascript:;" target="_blank">美国近5亿美元租俄罗斯飞船座位</a></h4>
+                            <p><a href="javascript:;" target="_blank">目前美国在载人航天方面落后于俄罗斯，波音和X空间两个公司正在研究载人飞船技术。</a></p>
+                            <span></span>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="../xjp_images/xxl_53.jpg">
+                        <div>
+                            <h4><a href="javascript:;" target="_blank">美国近5亿美元租俄罗斯飞船座位</a></h4>
+                            <p><a href="javascript:;" target="_blank">目前美国在载人航天方面落后于俄罗斯，波音和X空间两个公司正在研究载人飞船技术。</a></p>
+                            <span></span>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="../xjp_images/xxl_53.jpg">
+                        <div>
+                            <h4><a href="javascript:;" target="_blank">美国近5亿美元租俄罗斯飞船座位</a></h4>
+                            <p><a href="javascript:;" target="_blank">目前美国在载人航天方面落后于俄罗斯，波音和X空间两个公司正在研究载人飞船技术。</a></p>
+                            <span></span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="l">
+                <div class="slides">
+                    <div class="flicking_con"></div>
+                    <div class="main_image">
+                        <ul>
+                            <li>
+                                <img src="../xjp_images/w1.jpg">
+                                <div>
+                                    <h5><a href="javascript:;" target="_blank">北京投资九千万引1</a></h5>
+                                    <p><a href="javascript:;" target="_blank">北京投资九千万引1北京投资九千万引1北京投资</a></p>
+                                    <span></span>
+                                </div>
+
+                            </li>
+                            <li>
+                                <img src="../xjp_images/w1.jpg">
+                                <div>
+                                    <h5><a href="javascript:;" target="_blank">北京投资九千万引1</a></h5>
+                                    <p><a href="javascript:;" target="_blank">北京投资九千万引1北京投资九千万引1北京投资</a></p>
+                                    <span></span>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="../xjp_images/w1.jpg">
+                                <div>
+                                    <h5><a href="javascript:;" target="_blank">北京投资九千万引1</a></h5>
+                                    <p><a href="javascript:;" target="_blank">北京投资九千万引1北京投资九千万引1北京投资</a></p>
+                                    <span></span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="javascript:;" class="btn_next" style="display: none"></a>
+                    <a href="javascript:;" class="btn_prev" style="display: none"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="list3">
+        <div class="r">
+            <h3><a href="jvascript:;" target="_blank">视频</a></h3>
+            <div class="t">
+                <div class="m">
+                    <img src="../xjp_images/xxl_61.jpg">
+                    <div></div>
+                    <p><a href="javascript:;" target="_blank">北京市旅游发展委主任鲁勇任中国</a></p>
+                </div>
+                <ul>
+                    <li><a href="jvascript:;" target="_blank">北京市旅游发展委主任鲁勇任中国残联党</a></li>
+                    <li><a href="jvascript:;" target="_blank">北京市旅游发展委主任鲁勇任中国残联党</a></li>
+                    <li><a href="jvascript:;" target="_blank">北京市旅游发展委主任鲁勇任中国残联党</a></li>
+                </ul>
+            </div>
+            <div class="adr" id="ad_03"></div>
+        </div>
+        <div class="l">
+            <div class="list2">
+                <h3 class="htitle"><a href="javascript:;">旅游考察</a></h3>
+                <div class="c">
+                    <div class="r">
+                        <ul>
+                            <li>
+                                <img src="../xjp_images/xxl_53.jpg">
+                                <div>
+                                    <h4><a href="javascript:;" target="_blank">美国近5亿美元租俄罗斯飞船座位</a></h4>
+                                    <p><a href="javascript:;" target="_blank">目前美国在载人航天方面落后于俄罗斯，波音和X空间两个公司正在研究载人飞船技术。</a></p>
+                                    <span></span>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="../xjp_images/xxl_53.jpg">
+                                <div>
+                                    <h4><a href="javascript:;" target="_blank">美国近5亿美元租俄罗斯飞船座位</a></h4>
+                                    <p><a href="javascript:;" target="_blank">目前美国在载人航天方面落后于俄罗斯，波音和X空间两个公司正在研究载人飞船技术。</a></p>
+                                    <span></span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="l">
+                        <div class="i">
+                            <img src="../xjp_images/xxl_51.png">
+                            <div>
+                                <h5><a href="javascript:;" target="_blank">北京投资九千万引1</a></h5>
+                                <p><a href="javascript:;" target="_blank">北京投资九千万引1北京投资九千万引1北京投资</a></p>
+                                <span></span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="ad" id="ad_04"></div>
+    <div class="list4">
+        <h3 class="htitle"><a href="javascript:;">高清图集</a></h3>
+        <div class="c">
+            <div class="slides">
+                <div class="flicking_con">
+                </div>
+                <div class="main_image">
+                    <ul>
+                        <li>
+                            <img src="../xjp_images/w1.jpg">
+                            <div></div>
+                            <p><span></span><a href="javascript:;" target="_blank">北京投资九千万引1</a></p>
+                        </li>
+                        <li>
+                            <img src="../xjp_images/w1.jpg">
+                            <div></div>
+                            <p><span></span><a href="javascript:;" target="_blank">北京投资九千万引2</a></p>
+                        </li>
+                        <li>
+                            <img src="../xjp_images/w1.jpg">
+                            <div></div>
+                            <p><span></span><a href="javascript:;" target="_blank">北京投资九千万引3</a></p>
+                        </li>
+                    </ul>
+                </div>
+                <a href="javascript:;" class="btn_next" style="display: none"></a>
+                <a href="javascript:;" class="btn_prev" style="display: none"></a>
+            </div>
+        </div>
+
+    </div>
+    <div class="footer">
+        <h3><a href="javascript:;" target="_blank">友情链接</a></h3>
+        <div>
+            <ul>
+                <li><a href="javascript:;" target="_blank"><img src="../xjp_images/xxl_71.jpg" ></a></li>
+                <li><a href="javascript:;" target="_blank"><img src="../xjp_images/xxl_71.jpg" ></a></li>
+                <li><a href="javascript:;" target="_blank"><img src="../xjp_images/xxl_71.jpg" ></a></li>
+                <li><a href="javascript:;" target="_blank"><img src="../xjp_images/xxl_71.jpg" ></a></li>
+                <li><a href="javascript:;" target="_blank"><img src="../xjp_images/xxl_71.jpg" ></a></li>
+            </ul>
+        </div>
+        <p><a href="javascript:;" target="_blank">中国驻德国使馆</a><a href="javascript:;" target="_blank">中国驻德国使馆</a><a href="javascript:;" target="_blank">中国驻德国使馆</a><a href="javascript:;" target="_blank">中国驻德国使馆</a><a href="javascript:;" target="_blank">中国驻德国使馆</a><a href="javascript:;" target="_blank">中国驻德国使馆</a><a href="javascript:;" target="_blank">中国驻德国使馆</a><a href="javascript:;" target="_blank">中国驻德国使馆</a></p>
+    </div>
+</div>
+<div class="btm haiwai_footer">
+    <div class="public_footer">
+        <p><a href="http://www.haiwainet.cn/adout/" target="_blank" rel="nofollow">关于海外网</a>|<a href="http://www.haiwainet.cn/adserves/" target="_blank" rel="nofollow">广告服务</a>|<!--<a href="http://www.haiwainet.cn/adout/welcome/" target='_blank' rel="nofollow">海外网招聘</a>|--><a href="http://www.haiwainet.cn/adout/lianxi/" target="_blank" rel="nofollow">联系我们</a>|<a href="http://www.haiwainet.cn/map/" target="_blank">网站地图</a>|<a href="http://www.yuecheng.com" target="_blank" rel="nofollow">法律顾问：北京岳成律师事务所</a></p>
+        <p>海外网版权所有 ，未经书面授权禁止使用</p>
+        <p>Copyright <em class="public_copyright"></em> 2011-2014 by www.haiwainet.cn all rights reserved</p>
+    </div>
+</div>
+<script src="../js/jquery-1.js"></script>
+<script src="../js/slides/jquery_002.js"></script>
+<script src="../js/slides/jquery.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.slides').each(function(e){
+            $(this).hover(function () {
+                $(this).parent().find(".btn_prev,.btn_next").fadeIn();
+            }, function () {
+                $(this).parent().find(".btn_prev,.btn_next").fadeOut();
+            });
+        });
+        $dragBln = false;
+        var s=3000;
+        $(".main_image").each(function(e){
+            var _this=this;
+            var len=$(this).find('li').length;
+            var h_a='';
+            for(var i= 0;i<len;i++){
+                h_a+='<a href="javascript:;"></a>';
+            }
+            $(this).parent().find('.flicking_con').html(h_a);
+            $(this).touchSlider({
+                flexible: true,
+                speed: 200,
+                btn_prev: $(_this).parent().find(".btn_prev"),
+                btn_next: $(_this).parent().find(".btn_next"),
+                paging: $(_this).parent().find(".flicking_con a"),
+                counter: function (e) {
+                    $(_this).parent().find(".flicking_con a").removeClass("on").eq(e.current - 1).addClass("on");
+                }
+            });
+            $(this).bind("mousedown", function () {
+                $dragBln = false;
+            });
+            $(this).bind("dragstart", function () {
+                $dragBln = true;
+            });
+            $(this).find('a').click(function () {
+                if ($dragBln) {
+                    return false;
+                }
+            });
+            clearInterval(_this.timer);
+            _this.timer = setInterval(function () {
+                $(_this).parent().find(".btn_next").click();
+            }, s);
+            $(this).hover(function () {
+                clearInterval(_this.timer);
+            }, function () {
+                clearInterval(_this.timer);
+                _this.timer = setInterval(function () {
+                    $(_this).parent().find(".btn_next").click();
+                }, s);
+            });
+            $(this).bind("touchstart", function () {
+                clearInterval(_this.timer);
+            }).bind("touchend", function () {
+                clearInterval(_this.timer);
+                _this.timer = setInterval(function () {
+                    $(_this).parent().find(".btn_next").click();
+                }, s);
+            });
+
+        });
+
+        $(".main_image img").each(function () {
+            var ww = $(".main_image").width();
+            var w = $(this).width();
+            var ml = Math.round((parseInt(ww) - parseInt(w)) / 2);
+            //$(this).css({ marginLeft: ml + "px" })
+        })
+
+
+        //天气
+        !function () {
+            var city=[{id:2463583,name:"奥克兰"},{id:2348327,name:"基督城"},{id:2348444,name:"但尼丁"},{id:2348696,name:"汉密尔顿"},{id:2351310,name:"惠灵顿"}];
+            var len=city.length,
+                count=0,
+                html='',
+                timecount=0;
+            for(var i= 0;i<len;i++){
+                weather(city[i].name,city[i].id,function(s){
+                    count++;
+                    var oLi=document.createElement('li');
+                    oLi.innerHTML=s;
+                    $('#weather').append(oLi);
+                    if(count==len){
+                        var h=oLi.offsetHeight;
+                        var st=$('#weather').html();
+                        st+=st;
+                        $('#weather').html(st);
+                        var timer=null;
+                        timer=setInterval(m,3000);
+
+                        function m(){
+                            if(timecount<=len){
+                                timecount++;
+                                t=-timecount*h+'px';
+                                if(timecount==len){
+                                    $('#weather').animate({top:t},500,function (){
+                                        timecount=0;
+                                        $('#weather').css('top',0);
+                                    });
+                                }else{
+                                    $('#weather').animate({top:t},500);
+                                }
+
+                            }else{
+                                timecount=0;
+                                $('#weather').css('top',0);
+                            }
+                        }
+
+                        $('#weather').mouseenter(function(){
+                            clearInterval(timer);
+                        });
+                        $('#weather').mouseleave(function(){
+                            clearInterval(timer);
+                            timer=setInterval(m,3000);
+                        });
+                    }
+                });
+            }
+        }();
+        function weather(name,id,callback){
+            var url='http://opa.haiwainet.cn/apis/weather?cityid='+id+'&format=jsonp';
+            $.ajax({
+                url:url,
+                type: "GET",
+                dataType:"jsonp",
+                data:"",
+                jsonp: "callback",
+                success:function(data){
+                    var obj=data['result']['weather'][0];
+                    var html=''
+                    html+='<span>'+name+'</span>';
+                    html+='<span class="i"><img src="http://l.yimg.com/a/i/us/we/52/'+obj['code']+'.gif" width="30" height="30" /></span>'
+                    html+=obj['text']+'&ensp;'+obj['low']+'℃ ～ '+obj['high']+'℃';
+                    callback&&callback(html);
+                }
+            });
+        }
+        //汇率
+        !function (){
+            var str='haiwai_jsonp_'+Math.random()+new Date().getTime();
+            var json={};
+            json.url='http://api.kannz.com/forex/jsonp/haiwainet/4b2fff959b6a1dd997a493755689fe58&callback=jsonpReturn?'+str;
+
+            window["jsonpReturn"]=function(backJson)  //回调函数必须是全局
+            {
+               oHead.removeChild(oS);
+                window['jsonpReturn']=null;
+                var html='';
+                for(key in backJson){
+                    if(backJson[key]['c-name']){
+                        var name=backJson[key]['c-name'].replace('兑','</i><em>\/');
+                        html+='<li><span class="c"><i>'+name+'</em>'+backJson[key]['allround']+'</span></li>';
+                    }
+                }
+                $('#rate').html(html);
+                var timer=null;
+                var len=$('#rate li').length;
+                var h=$('#rate li:eq(0)').height();
+                var timecount=0;
+                timer=setInterval(m,3000);
+                function m(){
+                    if(timecount<=len){
+                        timecount++;
+                        t=-timecount*h+'px';
+                        if(timecount==len){
+                            $('#rate').animate({top:t},500,function (){
+                                timecount=0;
+                                $('#rate').css('top',0);
+                            });
+                        }else{
+                            $('#rate').animate({top:t},500);
+                        }
+
+                    }else{
+                        timecount=0;
+                        $('#rate').css('top',0);
+                    }
+                }
+                $('#rate').mouseenter(function(){
+                    clearInterval(timer);
+                });
+                $('#rate').mouseleave(function(){
+                    clearInterval(timer);
+                    timer=setInterval(m,3000);
+                });
+            };
+            var oS=document.createElement('script');
+            oS.src=json.url;
+            var oHead=document.getElementsByTagName('head')[0];
+            oHead.appendChild(oS);
+            if(json.timeout)
+            {
+                var timer=setTimeout(function(){
+                    window[str]=null;
+                    oHead.removeChild(oS);
+                    json.error&&json.error(0);
+
+                },json.timeout);
+            };
+        }();
+    });
+
+</script>
+</body>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html style="font-size: 16px">
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <meta name="format-detection" content="telephone=no">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../stylesheets/haiwai_public.css">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/kangzhan.css">
+    <script src="../js/public/fontSize.js"></script>
+</head>
+<body>
+<div class="header"></div>
+<div class="main">
+    <h1>多地出台规定强制带薪休假不休假不能评优</h1>
+    <p class="description">今年第13号台风“苏迪罗”重创福建电网，截至8月8日20时，福建全省约200万户客户用电受影响，经国网福建省电力有限公司全力抢修，已恢复63万户。</p>
+    <div class="count">参与人数：<span id="count">150000</span></div>
+    <div class="main-con">
+        <div class="mt"><a href="#live">互动直播</a><a href="#version">留言板</a></div>
+        <!--留言版-->
+        <div class="message-version" id="version">
+            <h2>留言板</h2>
+            <div class="mes">
+                <ul>
+                    <li>
+                        <div class="mescon">
+                            <h5>主持人-周杰伦</h5>
+                            <p>为推进政策落实，部分地方政府相继出台细则。但记者注意到，带薪休假已经开始趋于，这是制度善意还是矫枉过正。</p>
+                            <div><img src=""> </div>
+                            <span class="arrow"></span>
+                        </div>
+                        <div class="head-portrait"><img src="../images/01.jpg"> </div>
+                    </li>
+                    <li>
+                        <div class="mescon">
+                            <h5>主持人-周杰伦</h5>
+                            <p>为推进政策落实，部分地方政府相继出台细则。但记者注意到，带薪休假已经开始趋于，这是制度善意还是矫枉过正。</p>
+                            <div><img src=""> </div>
+                            <span class="arrow"></span>
+                        </div>
+                        <div class="head-portrait"><img src="../images/01.jpg"> </div>
+                    </li>
+                    <li>
+                        <div class="mescon">
+                            <h5>主持人-周杰伦</h5>
+                            <p>为推进政策落实，部分地方政府相继出台细则。但记者注意到，带薪休假已经开始趋于，这是制度善意还是矫枉过正。</p>
+                            <div><img src=""> </div>
+                            <span class="arrow"></span>
+                        </div>
+                        <div class="head-portrait"><img src="../images/01.jpg"> </div>
+                    </li>
+                    <li>
+                        <div class="mescon">
+                            <h5>主持人-周杰伦</h5>
+                            <p>为推进政策落实，部分地方政府相继出台细则。但记者注意到，带薪休假已经开始趋于，这是制度善意还是矫枉过正。</p>
+                            <div><img src=""> </div>
+                            <span class="arrow"></span>
+                        </div>
+                        <div class="head-portrait"><img src="../images/01.jpg"> </div>
+                    </li>
+                </ul>
+                <div class="g"></div>
+            </div>
+        </div>
+        <!--互动直播-->
+        <div class="interactive-live" id="live">
+            <h2>互动直播</h2>
+            <div class="mes">
+                <ul>
+                    <li>
+                        <div class="mescon">
+                            <h5>主持人-周杰伦</h5>
+                            <p>为推进政策落实，部分地方政府相继出台细则。但记者注意到，带薪休假已经开始趋于，这是制度善意还是矫枉过正。</p>
+                            <div class="time">2015-10-01</div>
+                            <div class="gd"><a href="javascript:;" target="_blank">更多</a> </div>
+                            <span class="arrow"></span>
+                        </div>
+                        <div class="head-portrait"><img src="../images/01.jpg"> </div>
+
+                    </li>
+                </ul>
+                <div class="g"></div>
+            </div>
+
+        </div>
+    </div>
+    <div class="message">
+        <h5>我来说两句</h5>
+        <div><textarea id="say"></textarea></div>
+        <span id="sub">提交</span>
+    </div>
+</div>
+<div class="allBg" id="allBg"></div>
+<div class="btn_updata"><a href="javascript:;" id="btn_up">获取</a> <span>有3条新消息</span></div>
+<div class="footer">
+</div>
+<script src="../js/jquery-1.js"></script>
+<script src="../js/public/ele.js"></script>
+<script>
+    var oSpan=document.getElementById('sub'),
+            oText=document.getElementById('say');
+    oSpan.onmousedown=function(e){
+        addClass(this,'active');
+    };
+    oSpan.onmouseup=function(e){
+        removeClass(this,'active');
+    };
+
+    $(function(){
+        !function (){
+            //获取留言
+            //获取页面ID
+            var url='http://changyan.sohu.com/api/2/topic/load?client_id=cyrcYkWpO&topic_url=http://statics.haiwainet.cn/tpl/2015-08-15/kangzhantest/html/kangzhan.html';
+            $.ajax({
+                url:url,
+                type: "GET",
+                dataType:"jsonp",
+                data:"",
+                jsonp: "callback",
+                success:function(data){
+                    var id=data.topic_id;
+                    $.ajax({
+                        url:'http://changyan.sohu.com/api/2/topic/comments',
+                        type: "GET",
+                        dataType:"jsonp",
+                        data:{
+                            client_id:"cyrcYkWpO",
+                            topic_id:id
+                        },
+                        jsonp: "callback",
+                        success:function(comments){
+                            //mesData
+                            var commentsData=comments['comments'];
+                            for(var i=0,m=commentsData.length;i<m;i++){
+                                var oLi=document.createElement('li');
+                                oLi.innerHTML='<div class="mescon"><h5>网友</h5><p>'+commentsData[i].content+'</p><span class="arrow"></span></div><div class="head-portrait"><img src="../images/01.jpg"></div>';
+                                $('#mesData').append(oLi);
+                            }
+
+                        }
+                    });
+                    oSpan.onclick=function(e){
+                        $.ajax({
+                            type: "POST",
+                            url: "http://changyan.sohu.com/api/2/comment/submit",
+                            data: {
+                                client_id:"cyrcYkWpO",
+                                topic_id:id,
+                                access_token:'eB2RZM3wtv-afVWi4EDqE3usLQY9nIvquPBqJsaOCnk',
+                                content:oText.value
+                            },
+                            success: function(ids){
+                                var oLi=document.createElement('li');
+                                oLi.innerHTML='<div class="mescon"><h5>网友</h5><p>'+oText.value+'</p><span class="arrow"></span></div><div class="head-portrait"><img src="../images/01.jpg"></div>';
+                                $('#mesData').prepend(oLi);
+                                console.log(ids.id);
+                            }
+                        });
+                    };
+                }
+            });
+        }();
+        //直播
+        !function (){
+            var str='haiwai_jsonp_'+Math.random()+new Date().getTime();
+            var json={};
+            json.url='http://192.168.197.76:8080/RealtimeRoomCMS/server/json/page_1.json?'+str;
+
+            window["callback"]=function(data)  //回调函数必须是全局
+            {
+                oHead.removeChild(oS);
+                window['callback']=null;
+                console.log(data);
+
+            };
+            var oS=document.createElement('script');
+            oS.src=json.url;
+            var oHead=document.getElementsByTagName('head')[0];
+            oHead.appendChild(oS);
+            if(json.timeout)
+            {
+                var timer=setTimeout(function(){
+                    window[str]=null;
+                    oHead.removeChild(oS);
+                    json.error&&json.error(0);
+
+                },json.timeout);
+            };
+        }();
+
+    });
+
+
+</script>
+</body>
+</html>

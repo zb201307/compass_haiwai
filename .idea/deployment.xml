@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" serverName="haiwai_CMS">
+    <serverData>
+      <paths name="haiwai_CMS">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/" local="E:/haiwai_CMS" web="/" />
+            <mapping local="" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>
+

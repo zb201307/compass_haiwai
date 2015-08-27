@@ -1,0 +1,1116 @@
+@import "mixin","haiwai";
+.main{
+  @include main-width();
+  margin: 0 auto;
+  @include height-set();
+  h1{
+    @media (max-width: 768px) {
+      @include height-set();
+    }
+    @media (min-width: 769px) {
+      @include height-set(65px);
+      @include height-set(rem(65));
+    }
+    @include margin(10,0,8,0);
+  }
+  .nav{
+    @media (max-width: 768px) {
+      height: auto;
+      a{
+        padding: 0 rem(10);
+      }
+    }
+    @media (min-width: 769px) {
+      height: rem(36);
+      a{
+        padding: 0 rem(32);
+      }
+    }
+    background-color: #3366cc;
+    text-align: center;
+    @include font($f-yahei,14,36,#fff);
+    a{
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+  .nav-bottom{
+    background-color: #e2e2e2;
+    text-align: center;
+    @include font($f-yahei,12,30);
+    @include afont();
+    @include ruler(height,30);
+    overflow: hidden;
+    position: relative;
+    span.l{
+      @include ruler(width,48);
+      @include ruler(height,28);
+      background:url("../xjp_images/m.jpg") no-repeat left 1px;
+      background:url("../xjp_images/m.jpg") no-repeat left rem(1);
+      @include ruler(background-size,28);
+      float: left;
+      @include margin(0,0,0,1);
+      @include padding(1,12,1,40);
+      color: #cb4953;
+      @include border(1,solid,#bcbcbc,-right);
+      @include ruler(line-height,28);
+    }
+    ul{
+      width: 100%;
+      position: absolute;
+      @include ruler(left,101);
+      overflow: hidden;
+      top: 0;
+      li{
+
+        @include ruler(height,30);
+        overflow: hidden;
+        text-align: left;
+        span.c{
+          i{
+            font-style: normal;
+            color: #446fcb;
+          }
+          em{
+            font-style: normal;
+            @include margin(0,10,0,0);
+          }
+          color: #363636;
+          @include padding(0,0,0,22);
+        }
+      }
+    }
+
+    @media (max-width: 768px) {
+      height: auto;
+      span.l{
+        width: rem(56);
+       @include padding(1,12,1,30);
+       //border: 0;
+      }
+    }
+  }
+  h2{
+    @media (max-width: 768px) {
+      height: auto;
+      @include font($f-yahei,18,34);
+    }
+    @media (min-width: 769px) {
+      @include ruler(height,64);
+      @include font($f-yahei,40,64);
+    }
+    overflow:hidden;
+    color: #000;
+    @include margin(10,0,0,0);
+    margin-top: 10px;
+    margin-top: rem(10);
+    @include afont();
+    a{
+      display: inline-block;
+    }
+    img{
+      float: left;
+      @include margin(0,20,0,0);
+    }
+  }
+  div.topcon{
+    @include height-set();
+    @include margin(10,0,0,0);
+    .l{
+      @media (max-width: 768px) {
+        width:100%;
+        .slides{
+          .main_image{
+            ul{
+              li{
+                div{
+                  width: 100%;
+                }
+              }
+            }
+          }
+          div.flicking_con{
+            width:100%;
+          }
+        }
+      }
+      @media (min-width: 769px) {
+        width: rem(350);
+        .slides{
+          .main_image{
+            ul{
+              li{
+                div{
+                  width: rem(350);
+                }
+              }
+            }
+          }
+          div.flicking_con{
+            width:rem(350);
+          }
+        }
+      }
+      @include ruler(height,298);
+      overflow: hidden;
+      float: left;
+      position: relative;
+      @include margin(0,20,0,0);
+      /*幻灯片*/
+      .slides{
+        @include ruler(height,298);
+        .main_image{
+          @include ruler(height,298);
+          ul{
+            @include ruler(height,298);
+            li{
+              @include ruler(height,298);
+              div{
+                @include ruler(height,50);
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                background: rgba(0,0,0,0.5);
+                z-index: 10;
+              }
+              p{
+                @include ruler(width,350);
+                @include ruler(bottom,20);
+                @include font($f-yahei,16,30,#fff);
+                @include afont(#fff);
+                position: absolute;
+                left: 0;
+                z-index: 20;
+                text:{
+                  align: center;
+                }
+              }
+            }
+          }
+        }
+        div.flicking_con{
+          @include ruler(bottom,2);
+        }
+      }
+    }
+    .c{
+      @media (max-width: 768px) {
+        width: 100%;
+      }
+      @media (min-width: 769px) {
+        width: rem(315);
+      }
+      @include height-set();
+      float: left;
+      h4{
+        @include font($f-yahei,18,40);
+        @include ruler(min-height,40);
+        overflow: hidden;
+        @include afont();
+      }
+      ul{
+        li{
+          @include ruler(height,30);
+          overflow: hidden;
+          @include font($f-simsun,14,30);
+          @include padding(0,0,0,12);
+          background: url("../xjp_images/d.png") no-repeat 5px center;
+          background: url("../xjp_images/d.png") no-repeat rem(5) center;
+          @include afont();
+        }
+      }
+    }
+    .r{
+      @media (max-width: 768px) {
+        width:100%;
+      }
+      @media (min-width: 769px) {
+        @include ruler(width,280);
+      }
+      @include height-set();
+      float: right;
+      .top{
+        @include font($f-simsun,12,65,#fff);
+        @include ruler(height,65);
+        overflow: hidden;
+        background-color: #b2121f;
+        position: relative;
+        width: 100%;
+        ul{
+          width: 100%;
+          position: absolute;
+          left: 0;
+          top: 0;
+          li{
+            @include ruler(height,65);
+            span{
+              @include padding(0,0,0,10);
+              display: inline-block;
+              float: left;
+              &.i{
+                @include ruler(height,48);
+                @include padding(17,10,0,10);
+                img{
+                  @include ruler(height,30);
+                  vertical-align: top;
+                }
+              }
+              &.t{
+                @include font($f-simsun,12,65,#fff);
+              }
+            }
+          }
+        }
+
+      }
+      .b{
+        background-color: #f6f6f6;
+        @include height-set();
+        @include margin(5,0,0,0);
+        @include padding(0,0,15,0);
+        a{
+          background: url("../xjp_images/b.png") no-repeat;
+          background-size:cover;
+          @include ruler(height,43);
+          @include ruler(width,125);
+          display: inline-block;
+          @include font($f-yahei,16,43,#333333);
+          text-decoration: none;
+          float: left;
+          @include margin(10,0,0,10);
+          i{
+            @include ruler(height,29);
+            @include ruler(width,29);
+            @include margin(7,5,0,5);
+            float: left;
+            display: inline-block;
+          }
+          i.icon1{
+            background:url("../xjp_images/ly.png") no-repeat center center;
+            background-size:cover;
+          }
+          i.icon2{
+            background:url("../xjp_images/dc.png") no-repeat center center;
+            background-size:cover;
+          }
+          i.icon3{
+            background:url("../xjp_images/ym.png") no-repeat center center;
+            background-size:cover;
+          }
+          .icon4{
+            background:url("../xjp_images/ls.png") no-repeat center center;
+            background-size:cover;
+          }
+          i.icon5{
+            background:url("../xjp_images/jk.png") no-repeat center center;
+            background-size:cover;
+          }
+          i.icon6{
+            background:url("../xjp_images/my.png") no-repeat center center;
+            background-size:cover;
+          }
+          i.icon7{
+            background:url("../xjp_images/ss.png") no-repeat center center;
+            background-size: 100% 100%;
+          }
+          i.icon8{
+            background:url("../xjp_images/qz.png") no-repeat center center;
+            background-size:cover;
+          }
+        }
+      }
+    }
+  }
+  div.list1{
+    @include height-set();
+    @include margin(10);
+    @media (max-width: 768px) {
+      .l{
+        width: 100%;
+        .c{
+          width: 100%;
+        }
+      }
+      .r{
+        width: 100%;
+      }
+    }
+    @media (min-width: 769px) {
+      .l{
+        width: rem(700);
+        .c{
+          width:rem(315);
+          .t{
+            img{
+
+            }
+          }
+        }
+      }
+      .r{
+        width: rem(280);
+      }
+    }
+    .l{
+      @include height-set();
+      .c{
+        @include height-set();
+        @include margin(20,32,0,0);
+        float: left;
+        h4{
+          @include ruler(height,50);
+          @include padding(0,0,0,92);
+          overflow: hidden;
+          background: url("../xjp_images/xxl_34.jpg") no-repeat left center;
+          position: relative;
+          span{
+            width: 100%;
+            @include ruler(height,28);
+            overflow: hidden;
+            display: inline-block;
+            @include border(1,solid,#2e64d1,-top);
+            @include margin(19,0,0,0);
+            color: #000;
+            @include font($f-yahei,18,28);
+            @include afont();
+          }
+          a.m{
+            @include ruler(height,36);
+            @include ruler(width,52);
+            display: inline-block;
+            @include font($f-arial,18,36);
+            color: #3366cc;
+            text:{
+              decoration: none;
+              align: center;
+            };
+            background-color: #fff;
+            position: absolute;
+            @include ruler(right,20);
+            top:0;
+            z-index: 20;
+          }
+        }
+        .t{
+          @include height-set();
+          @include margin(16,0,0,0);
+          img{
+            @include ruler(height,90);
+            @include ruler(width,160);
+            float: left;
+          }
+          .cb{
+            @include ruler(height,90);
+            @include ruler(width,140);
+            overflow: hidden;
+            float: right;
+            h5{
+              @include font($f-simsun,12,18);
+              @include afont();
+            }
+            p{
+              @include font($f-simsun,12,22,#808080);
+              @include afont(#808080);
+              @include margin(5,0,0,0);
+            }
+          }
+        }
+        .lt{
+          @include height-set();
+          @include margin(10,0,0,0);
+          ul{
+            li{
+              @include ruler(height,28);
+              overflow: hidden;
+              @include font($f-simsun,14,28);
+              @include afont();
+              a:hover,a:active{
+                text-decoration:underline;
+              }
+              background: url("../xjp_images/d.png") no-repeat 7px center;
+              background: url("../xjp_images/d.png") no-repeat rem(7) center;
+            }
+          }
+        }
+      }
+    }
+    .r{
+      float: right;
+      @include height-set();
+      .d1{
+        @include height-set();
+        @include padding(96,0,0,0);
+        background: url("../xjp_images/xxl_07.jpg") no-repeat left top;
+        background-size:100% auto;
+        div.c{
+          @include padding(10,15,18,15);
+          @include border(1,solid,#d6d6d6,'');
+          border-top: 0;
+          p{
+            @include font($f-simsun,12,22,#666666);
+            @include afont(#666666);
+            text-indent: 2em;
+            color: #666666;
+            a{
+              i{
+                color: #990000;
+                font-style: normal;
+              }
+            }
+          }
+          div{
+            @include height-set();
+            @include margin(10,0,0,0);
+            text-align: center;
+            a{
+              @include ruler(height,24);
+              @include ruler(width,96);
+              display: inline-block;
+              background-color:#b2121f;
+              border-radius: 4px;
+              border-radius: rem(4);
+              text:{
+                align: center;
+                decoration: none;
+              }
+              line:{
+                @include ruler(height,24);
+              }
+              @include font($f-yahei,14,24,#fff);
+              @include margin(0,9,0,9);
+            }
+          }
+        }
+      }
+      .d2{
+        @include height-set();
+        h3{
+          @include font($f-yahei,18,40);
+          @include afont();
+          @include margin(10,0,0,0);
+          @include padding(0,0,0,15);
+        }
+        div{
+          @include height-set();
+          @include border(1,solid,#d6d6d6,'');
+          @include padding(15,0,15,17);
+          ul{
+            li{
+              @include ruler(height,26);
+              @include font($f-simsun,12,26);
+              overflow: hidden;
+              @include padding(0,0,0,7);
+              background: url("../xjp_images/d.png") no-repeat left center;
+              @include afont();
+              a:hover,a:active{
+                text:{
+                  decoration: underline;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .htitle{
+    @include ruler(height,38);
+    overflow: hidden;
+    background: url("../xjp_images/h3.jpg") repeat-x;
+    a{
+      @include ruler(height,38);
+      overflow: hidden;
+      display: inline-block;
+      @include padding(0,98,0,10);
+      background: #fff url("../xjp_images/h2.jpg") no-repeat right top;
+      @include font($f-yahei,20,38,#3366cc);
+      text-decoration: none;
+    }
+  }
+  div.list2{
+    @include height-set();
+    @include margin(20,0,0,0);
+    @media (max-width: 768px) {
+      div.c{
+        .l{
+          width: 100%;
+          padding: 0;
+          border-right:0;
+          .slides{
+            .main_image{
+              ul{
+                li{
+                  div{
+                    width: 100%;
+                    padding:0 0 rem(30) 0;
+                  }
+                }
+              }
+            }
+            div.flicking_con{
+              width:100%;
+            }
+          }
+        }
+        .r{
+          width: 100%;
+          margin-bottom: rem(10);
+          ul{
+            li{
+              width: 100%;
+              padding: 0;
+              height: auto;
+              img{
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+    @media (min-width: 769px) {
+      div.c{
+        .l{
+          width: rem(368);
+          padding: rem(15);
+          border-right: rem(1) solid #d6d6d6;
+          .slides{
+            .main_image{
+              ul{
+                li{
+                  div{
+                    width: rem(328);
+                    padding: 0 rem(20) rem(30) rem(20);
+                  }
+                }
+              }
+            }
+            div.flicking_con{
+              width:rem(368);
+            }
+          }
+        }
+        .r{
+          width: rem(579);
+          ul{
+            li{
+              width: rem(259);
+              height: rem(228);
+              padding: 0 rem(15);
+              img{
+                width: rem(259);
+                height: rem(141);
+              }
+            }
+          }
+        }
+      }
+    }
+    div.c{
+      @include height-set();
+      @include border(1,solid,#d6d6d6,'');
+      .l{
+        @include ruler(height,466);
+        overflow: hidden;
+        float: left;
+        /*幻灯片*/
+        .slides{
+          @include ruler(height,466);
+          .main_image{
+            @include ruler(height,466);
+            ul{
+              @include ruler(height,466);
+              li{
+                @include ruler(height,466);
+                div{
+                  background-color: #5b7493;
+                  position: absolute;
+                  left: 0;
+                  bottom: 0;
+                  h5{
+                    @include height-set();
+                    @include font($f-simsun,14,36,#fff);
+                    @include afont(#fff);
+                    font-weight: bold;
+                    text-align: center;
+                  }
+                  p{
+                    @include height-set();
+                    @include font($f-simsun,12,20,#fff);
+                    @include afont(#fff);
+                  }
+                  span{
+                    @include ruler(height,12);
+                    @include ruler(width,25);
+                    display: inline-block;
+                    position: absolute;
+                    @include ruler(right,26);
+                    @include ruler(top,-12);
+                    background: url("../xjp_images/ttt.png") no-repeat left bottom;
+                  }
+                }
+                img{
+                  @include ruler(height,466);
+                }
+              }
+            }
+          }
+          div.flicking_con{
+            @include ruler(bottom,2);
+            @include ruler(width,368);
+          }
+        }
+      }
+      .r{
+        @include height-set();
+        float: right;
+        ul{
+          li{
+
+
+            overflow: hidden;
+            float: left;
+            @include margin(15,0,0,0);
+            img{
+              vertical-align:top;
+            }
+            div{
+              height: auto;
+              background-color: #fff;
+              h4{
+                @include height-set();
+                @include font($f-simsun,14,32);
+                font-weight: bold;
+                @include afont();
+                text-align: center;
+                @include padding(0,5,5,5);
+              }
+              p{
+                @include height-set();
+                @include font($f-simsun,12,24,#666666);
+                @include afont(#666666);
+                @include a-x();
+                @include padding(0,5,0,5);
+              }
+              span{
+                @include ruler(height,12);
+                @include ruler(width,25);
+                overflow: hidden;
+                display: none;
+              }
+            }
+            div:hover{
+              background-color: #5b7493;
+              position: relative;
+              h4,p{
+                color: #fff;
+                a{
+                  color: #fff;
+                }
+              }
+              span{
+                display: inline-block;
+                background: url("../xjp_images/ttt.png") no-repeat bottom center;
+                position: absolute;
+                @include ruler(top,-12);
+                @include ruler(right,12);
+                display: block;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  div.list3{
+    @include height-set();
+    @media (max-width: 768px) {
+      .l{
+        width: 100%;
+        .list2{
+          .l{
+            div.i{
+              div{
+                width: 100%;
+                padding: 0 0 rem(10);
+              }
+            }
+          }
+          .r{
+            width: 100%;
+            ul{
+              li{
+                width: 100%;
+                height:auto;
+                img{
+                  height: 100%;
+                }
+              }
+            }
+          }
+        }
+
+      }
+      .r{
+        width: 100%;
+      }
+    }
+    @media (min-width: 769px) {
+      .l{
+        width: rem(674);
+        .list2{
+          .l{
+            div.i{
+              div{
+                width: rem(328);
+                padding: 0 rem(20) rem(10);
+              }
+            }
+          }
+          .r{
+            width: rem(273);
+            ul{
+              li{
+                width: rem(242);
+                height: rem(228);
+                img{
+                  width: rem(242);
+                  height: rem(141);
+                }
+              }
+            }
+          }
+        }
+
+      }
+      .r{
+        width: rem(292);
+      }
+    }
+    .l{
+      @include height-set();
+      float: left;
+      .list2{
+        .r{
+          margin-top: 0;
+        }
+        .l{
+          div.i{
+            @include ruler(height,466);
+            position: relative;
+            div{
+              background-color: #5b7493;
+              position: absolute;
+              left: 0;
+              bottom: 0;
+              h5{
+                @include height-set();
+                @include font($f-simsun,14,36,#fff);
+                @include afont(#fff);
+                font-weight: bold;
+                text-align: center;
+              }
+              p{
+                @include height-set();
+                @include font($f-simsun,12,20,#fff);
+                @include afont(#fff);
+              }
+              span{
+                @include ruler(height,12);
+                @include ruler(width,25);
+
+                display: inline-block;
+                position: absolute;
+                @include ruler(right,26);
+                @include ruler(top,-12);
+                background: url("../xjp_images/ttt.png") no-repeat left bottom;
+              }
+            }
+            img{
+              @include ruler(height,466);
+              @include ruler(width,368);
+            }
+          }
+        }
+      }
+    }
+    .r{
+      @include height-set();
+      float: right;
+      @include margin(20,0,0,0);
+      h3{
+        height: 24px;
+        height: rem(24);
+        overflow: hidden;
+        @include font($f-yahei,20,24);
+        @include afont();
+        @include margin(6,0,0,0);
+        @include padding(0,0,0,15);
+      }
+      .t{
+        @include margin(8,0,0,0);
+        @include height-set();
+        @include border(1,solid,#d6d6d6,'');
+        @include padding(15,15,15,15);
+        div.m{
+          @include ruler(height,184);
+          overflow: hidden;
+          position: relative;
+          div{
+            @include ruler(height,34);
+            @include ruler(width,260);
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.5);
+          }
+          p{
+            @include ruler(width,260);
+            @include ruler(height,34);
+            @include padding(0,0,0,32);
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            @include font($f-simsun,12,34,#fff);
+            @include afont(#fff);
+            background: url("../xjp_images/v1.png") no-repeat 7px center;
+            background: url("../xjp_images/v1.png") no-repeat rem(7) center;
+          }
+          img{
+            @include ruler(height,184);
+            @include ruler(width,260);
+          }
+        }
+
+        ul{
+          li{
+            @include ruler(height,18);
+            @include font($f-simsun,12,18);
+            @include padding(0,0,0,30);
+            @include margin(10,0,0,0);
+            @include afont();
+            @include a-x();
+            background:url("../xjp_images/xxl_65.jpg") no-repeat 5px center;
+            background:url("../xjp_images/xxl_65.jpg") no-repeat rem(5) center;
+          }
+        }
+      }
+    }
+  }
+  div.list4{
+    @include margin(10,0,0,0);
+    @include height-set();
+    @media (max-width: 768px) {
+      div.c{
+        .slides{
+          .main_image{
+            width: 100%;
+            ul{
+              li{
+                div{
+                  width: 100%;
+                  left:0;
+                  bottom:0;
+                }
+                p{
+                  width: 100%;
+                  left:0;
+                  bottom:0;
+                }
+                img{
+                  width:100%;
+                }
+              }
+            }
+          }
+          a.btn_prev,a.btn_next{
+            display: none;
+          }
+        }
+      }
+    }
+    @media (min-width: 769px) {
+      div.c{
+        .slides{
+          .main_image{
+            width: rem(700);
+            ul{
+              li{
+                div{
+                  width: rem(680);
+                  left: rem(10);
+                  bottom: rem(10);
+                }
+                p{
+                  width: rem(680);
+                  left: rem(10);
+                  bottom: rem(10);
+                }
+                img{
+                  width:rem(700);
+                  height: rem(420);
+                }
+              }
+            }
+          }
+          a.btn_prev,a.btn_next{
+            display: inline-block;
+          }
+        }
+      }
+    }
+    div.c{
+      @include height-set();
+      @include margin(35,0,0,0);
+      @include padding(0,0,70,0);
+      background: url("../xjp_images/xxl_09.jpg") no-repeat center bottom;
+      /*幻灯片*/
+      .slides{
+        @include ruler(height,420);
+        .main_image{
+          @include ruler(height,420);
+          margin: 0 auto;
+          ul{
+            li{
+              @include ruler(height,420);
+              div{
+                @include ruler(height,62);
+                background:rgba(0,0,0,0.5);
+                position: absolute;
+                overflow: hidden;
+              }
+              p{
+                @include ruler(height,62);
+                position: absolute;
+                z-index: 100;
+                overflow: hidden;
+                @include font($f-yahei,26,62,#fff);
+                @include afont(#fff);
+                span{
+                  @include ruler(width,5);
+                  @include ruler(height,62);
+                  @include margin(0,20,0,0);
+                  float: left;
+                  display: inline-block;
+                  background-color: #fff;
+                }
+              }
+              img{
+              }
+            }
+          }
+        }
+        position: relative;
+        div.flicking_con{
+          display: none;
+        }
+        a.btn_prev,a.btn_next{
+          z-index:11111;
+          position:absolute;
+          @include ruler(height,43);
+          @include ruler(width,43);
+          @include margin(-21,0,0,0);
+          top:50%;
+        }
+        a.btn_prev{
+          background:url(../xjp_images/left.jpg) no-repeat left top;
+          @include ruler(left,20);
+        }
+        a.btn_next{
+          background:url(../xjp_images/right.jpg) no-repeat right top;
+          @include ruler(right,20);
+        }
+      }
+    }
+  }
+  div.footer{
+    @include height-set();
+    @include border(2,solid,#d8d8d8,'');
+    @include margin(10,0,0,0);
+    @include padding(0,16,16,16);
+    h3{
+      @include border(1,solid,#d8d8d8,-bottom);
+      @include font($f-yahei,20,44);
+      @include margin(6,0,0,0);
+      @include padding(0,0,0,10);
+      @include afont();
+    }
+    div{
+      @include height-set();
+      @include border(1,dotted,#bcbcbc,-bottom);
+      @include padding(0,0,15,0);
+      ul{
+        li{
+          @include ruler(height,54);
+          @include ruler(width,145);
+          @include margin(15,20,0,0);
+          overflow: hidden;
+          float: left;
+          img{
+            @include ruler(width,145);
+            @include ruler(height,54);
+          }
+        }
+      }
+    }
+    p{
+      @include height-set();
+      @include font($f-simsun,12,32,#666666);
+      @include afont(#666666);
+      a{
+        @include margin(0,22,0,0);
+      }
+    }
+
+  }
+}
+
+/*幻灯片*/
+.slides{
+  overflow:hidden;
+  position:relative;
+  .main_image{overflow:hidden;position:relative;}
+  .main_image ul{overflow:hidden;position:absolute;top:0;left:0}
+  .main_image li{
+    float:left;
+    img{
+      display:block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  div.flicking_con{
+    position:absolute;
+    left:0;
+    z-index:999;
+    @include ruler(height,21);
+    text-align: center;
+    a{
+      @include ruler(height,21);
+      @include ruler(width,21);
+      margin:0;
+      padding:0;
+      background:url('../xjp_images/btn01.png')no-repeat;
+      background-size: cover;
+      display:inline-block;
+      &.on{
+        background:url('../xjp_images/btn02.png')no-repeat;
+        background-size: cover;
+      }
+    }
+  }
+  .btn_prev,.btn_next{
+    display: none;
+  }
+  /*#btn_prev,#btn_next{z-index:11111;position:absolute;display:block;width:73px!important;height:74px!important;top:50%;margin-top:-37px;display:none;}
+  #btn_prev{background:url(../img/hover_left.png) no-repeat left top;left:10px;}
+  #btn_next{background:url(../img/hover_right.png) no-repeat right top;right:10px;}
+  */
+
+}
+
+.adr{
+  @include ruler(margin-top,10);
+}
+
+@include haiwai_footer();

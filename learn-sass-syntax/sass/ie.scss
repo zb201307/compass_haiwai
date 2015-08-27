@@ -1,0 +1,165 @@
+/* Welcome to Compass. Use this file to write IE specific override styles.
+ * Import this file using the following HTML or equivalent:
+ * <!--[if IE]>
+ *   <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+ * <![endif]--> */
+@import "mixin","haiwai";
+.haiwai_nav,.public_header2014{
+  height: 40px;
+  text-align: center;
+  .haiwai_c,.public_headernav2014{
+    a{
+      padding:0 8px;
+    }
+  }
+}
+
+h1{
+  @include height-set(65px);
+}
+.nav{
+  height: 36px;
+  a{
+    padding: 0 32px;
+  }
+ }
+h2{
+  height: 64px;
+  @include font($f-yahei,40px,64px);
+}
+
+div.topcon{
+  .l{
+    width: 350px;
+    .slides{
+      .main_image{
+        ul{
+          li{
+            div{
+              width: 350px;
+            }
+          }
+        }
+      }
+      div.flicking_con{
+        width:350px;
+      }
+    }
+  }
+  .c{
+    width: 315px;
+  }
+  .r{
+    width: 280px;
+  }
+}
+div.list1{
+  .l{
+    width: 700px;
+    .c{
+      width: 315px;
+    }
+  }
+  .r{
+    width:280px;
+  }
+}
+div.list2{
+  div.c{
+    .l{
+      width: 368px;
+      padding: 15px;
+      border-right: 1px solid #d6d6d6;
+      .slides{
+        .main_image{
+          ul{
+            li{
+              div{
+                width: 328px;
+                padding: 0 20px 30px 20px;
+              }
+            }
+          }
+        }
+        div.flicking_con{
+          width:368px;
+        }
+      }
+    }
+    .r{
+      width: 579px;
+      ul{
+        li{
+          width: 259px;
+          height: 228px;
+          padding: 0 15px;
+          img{
+            width: 259px;
+            height: 141px;
+          }
+        }
+      }
+    }
+  }
+}
+div.list3{
+  .l{
+    width: 674px;
+    .list2{
+      .l{
+        div.i{
+          div{
+            width: 328px;
+            padding:0 20px 10px;
+          }
+        }
+      }
+      .r{
+        width: 273px;
+        ul{
+          li{
+            width: 242px;
+            height: 228px;
+            img{
+              width: 242px;
+              height: 141px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .r{
+    width: 292px;
+  }
+}
+div.list4{
+  div.c{
+    .slides{
+      .main_image{
+        width: 700px;
+        ul{
+          li{
+            div{
+              width: 680px;
+              left: 10px;
+              bottom: 10px;
+            }
+            p{
+              width: 680px;
+              left: 10px;
+              bottom: 10px;
+            }
+            img{
+              width:700px;
+              height: 420px;
+            }
+          }
+        }
+      }
+      a.btn_prev,a.btn_next{
+        display: inline-block;
+      }
+    }
+  }
+}

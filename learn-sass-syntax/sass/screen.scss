@@ -1,0 +1,132 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+*/
+/**
+*CONTENTS
+*variables..............................变量集中存储文件
+*mixin..................................mixin集中存储文件
+*
+*SETTINGS
+*
+*COMPONENTS
+*reset..................................Compass内置浏览器重置样式文件
+*
+*BUSINESS
+*
+*BASE
+*screen.scss............................针对当前站点主页的样式修饰
+*/
+@import "veriables","mixin";                //引入文件
+//@import "normalize";
+@import "normalize-version";
+/*分隔线1*/
+@import "normalize/base";
+/*分隔线2*/
+@import "normalize/html5";
+/*分隔线3*/
+@import "normalize/links";
+
+.headline{
+  font-family:$headline-ff;
+}
+.main-sec{
+  font-family:$main-sec-ff;
+}
+a{
+  &:hover{
+    color: blue;
+    font:{
+      family:$main-sec-ff;
+      size:16px;
+    }
+  }
+}
+p{
+  color:hsl(270,100%,50%);
+}
+
+.webdemo-sec{
+  @include col-sm(50%);
+  &:hover{
+    background-color: #f5f5f5;
+  }
+  @at-root {
+    .main-header{
+      font:{
+        size: 24px;
+      }
+    }
+  }
+}
+.error{                     // 继承会输出到css文件里
+  color: #f00;
+}
+
+%error2{
+  color:#f00;                 //继承不会输出到css文件里
+}
+
+.serious-error{
+  @extend .error;
+  border: 1px #f00;
+}
+
+.serious-error2{
+  @extend %error2;
+  border: 1px #f00;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

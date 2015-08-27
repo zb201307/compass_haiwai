@@ -1,0 +1,100 @@
+/* Welcome to Compass. Use this file to write IE specific override styles.
+ * Import this file using the following HTML or equivalent:
+ * <!--[if IE]>
+ *   <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+ * <![endif]--> */
+.haiwai_nav, .public_header2014 {
+  height: 40px;
+  text-align: center; }
+  .haiwai_nav .haiwai_c a, .haiwai_nav .public_headernav2014 a, .public_header2014 .haiwai_c a, .public_header2014 .public_headernav2014 a {
+    padding: 0 8px; }
+
+h1 {
+  height: 65px;
+  overflow: hidden; }
+
+.nav {
+  height: 36px; }
+  .nav a {
+    padding: 0 32px; }
+
+h2 {
+  height: 64px;
+  font-family: Microsoft YaHei;
+  font-size: 40pxpx;
+  line-height: 64pxpx;
+  font-family: Microsoft YaHei;
+  font-size: 2.5pxrem;
+  line-height: 4pxrem;
+  color: #000; }
+
+div.topcon .l {
+  width: 350px; }
+  div.topcon .l .slides .main_image ul li div {
+    width: 350px; }
+  div.topcon .l .slides div.flicking_con {
+    width: 350px; }
+div.topcon .c {
+  width: 315px; }
+div.topcon .r {
+  width: 280px; }
+
+div.list1 .l {
+  width: 700px; }
+  div.list1 .l .c {
+    width: 315px; }
+div.list1 .r {
+  width: 280px; }
+
+div.list2 div.c .l {
+  width: 368px;
+  padding: 15px;
+  border-right: 1px solid #d6d6d6; }
+  div.list2 div.c .l .slides .main_image ul li div {
+    width: 328px;
+    padding: 0 20px 30px 20px; }
+  div.list2 div.c .l .slides div.flicking_con {
+    width: 368px; }
+div.list2 div.c .r {
+  width: 579px; }
+  div.list2 div.c .r ul li {
+    width: 259px;
+    height: 228px;
+    padding: 0 15px; }
+    div.list2 div.c .r ul li img {
+      width: 259px;
+      height: 141px; }
+
+div.list3 .l {
+  width: 674px; }
+  div.list3 .l .list2 .l div.i div {
+    width: 328px;
+    padding: 0 20px 10px; }
+  div.list3 .l .list2 .r {
+    width: 273px; }
+    div.list3 .l .list2 .r ul li {
+      width: 242px;
+      height: 228px; }
+      div.list3 .l .list2 .r ul li img {
+        width: 242px;
+        height: 141px; }
+div.list3 .r {
+  width: 292px; }
+
+div.list4 div.c .slides .main_image {
+  width: 700px; }
+  div.list4 div.c .slides .main_image ul li div {
+    width: 680px;
+    left: 10px;
+    bottom: 10px; }
+  div.list4 div.c .slides .main_image ul li p {
+    width: 680px;
+    left: 10px;
+    bottom: 10px; }
+  div.list4 div.c .slides .main_image ul li img {
+    width: 700px;
+    height: 420px; }
+div.list4 div.c .slides a.btn_prev, div.list4 div.c .slides a.btn_next {
+  display: inline-block; }
+
+/*# sourceMappingURL=ie.css.map */
