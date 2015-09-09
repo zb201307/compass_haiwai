@@ -59,8 +59,8 @@
       text-decoration: none;
       color: #000; }
     .main .nav-bottom span.l {
-      width: 48px;
-      width: 3rem;
+      width: 60px;
+      width: 3.75rem;
       height: 28px;
       height: 1.75rem;
       background: url("../xjp_images/m.jpg") no-repeat left 1px;
@@ -88,7 +88,8 @@
         height: 30px;
         height: 1.875rem;
         overflow: hidden;
-        text-align: left; }
+        text-align: left;
+        float: left; }
         .main .nav-bottom ul li span.c {
           color: #363636;
           padding: 0px 0px 0px 22px;
@@ -104,7 +105,7 @@
       .main .nav-bottom {
         height: auto; }
         .main .nav-bottom span.l {
-          width: 3.5rem;
+          width: 4.25rem;
           padding: 1px 12px 1px 30px;
           padding: 0.0625rem 0.75rem 0.0625rem 1.875rem; } }
   .main h2 {
@@ -256,6 +257,8 @@
         .main div.topcon .c ul li a {
           text-decoration: none;
           color: #000; }
+        .main div.topcon .c ul li a:hover, .main div.topcon .c ul li a:active {
+          text-decoration: underline; }
     .main div.topcon .r {
       height: auto;
       overflow: hidden;
@@ -288,7 +291,8 @@
           top: 0; }
           .main div.topcon .r .top ul li {
             height: 65px;
-            height: 4.0625rem; }
+            height: 4.0625rem;
+            overflow: hidden; }
             .main div.topcon .r .top ul li span {
               padding: 0px 0px 0px 10px;
               padding: 0rem 0rem 0rem 0.625rem;
@@ -321,7 +325,7 @@
         padding: 0rem 0rem 0.9375rem 0rem; }
         .main div.topcon .r .b a {
           background: url("../xjp_images/b.png") no-repeat;
-          background-size: cover;
+          background-size: contain;
           height: 43px;
           height: 2.6875rem;
           width: 125px;
@@ -470,10 +474,10 @@
             float: right; }
             .main div.list1 .l .c .t .cb h5 {
               font-family: SimSun, Helvetica, Arial, Verdana, sans-serif;
-              font-size: 12px;
+              font-size: 16px;
               line-height: 18px;
               font-family: SimSun, Helvetica, Arial, Verdana, sans-serif;
-              font-size: 0.75rem;
+              font-size: 1rem;
               line-height: 1.125rem;
               color: #000; }
               .main div.list1 .l .c .t .cb h5 a {
@@ -502,10 +506,10 @@
             height: 1.75rem;
             overflow: hidden;
             font-family: SimSun, Helvetica, Arial, Verdana, sans-serif;
-            font-size: 14px;
+            font-size: 12px;
             line-height: 28px;
             font-family: SimSun, Helvetica, Arial, Verdana, sans-serif;
-            font-size: 0.875rem;
+            font-size: 0.75rem;
             line-height: 1.75rem;
             color: #000;
             background: url("../xjp_images/d.png") no-repeat 7px center;

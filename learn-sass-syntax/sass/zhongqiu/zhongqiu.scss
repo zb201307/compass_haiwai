@@ -1,0 +1,787 @@
+@import "haiwai";
+@media (max-width: 768px) {
+  .main{
+    @include ruler(max-width,768);
+    @include height-set();
+    background: #ffeee9;
+    margin: 0 auto;
+    .banner{
+      width: 100%;
+      @include ruler(height,140);
+      overflow: hidden;
+      background:url("../../haiwai_images/zhongqiu/zc_02.jpg") no-repeat;
+      background-size: cover;
+      position: relative;
+      p{
+        width: 100%;
+        @include ruler(height,18);
+        position: absolute;
+        left: 0;
+        @include ruler(bottom,10);
+        @include font($f-yahei,8,18);
+        @include afont();
+        @include ruler(text-indent,16)
+      }
+    }
+    .nav{
+      display: none;
+    }
+    .boxs{
+      display: none;
+    }
+    .c{
+      @include height-set();
+      .ph1{
+        display:none;
+      }
+      .box1{
+        display: none;
+      }
+      p.dis{
+        @include margin(10,15,4,15);
+        @include font($f-yahei,10,16,#1e1e1e);
+        @include afont();
+        text-indent: 2em;
+      }
+      .h1{
+        @include ruler(height,28);
+        overflow: hidden;
+        background: url("../../haiwai_images/zhongqiu/zc_04.png") no-repeat;
+        background-size: cover;
+        @include padding(9,0,0,15);
+        @include font($f-yahei,16,28,#fff5f2);
+        @include afont(#fff5f2);
+        i{
+          @include font($f-arial,8,16,#80120a);
+          @include margin(12,0,0,3);
+          font-style: normal;
+        }
+      }
+      div.list{
+        @include height-set();
+        ul.activity{
+          @include ruler(margin-top,6);
+          @include height-set();
+          li{
+            @include ruler(height,12);
+            overflow: hidden;
+            @include border(3,solid,#e55353,-left);
+            @include font($f-yahei,12,12,#1e1e1e);
+            @include afont(#1e1e1e);
+            @include padding(0,0,0,8);
+            @include margin(8,0,0,15);
+          }
+        }
+        ul.pic{
+          @include height-set();
+          @include margin(5,0,0,10);
+          overflow: hidden;
+          li{
+            @include ruler(width, 140);
+            height: auto;
+            overflow: hidden;
+            @include margin(10,5,0,5);
+            float: left;
+            vertical-align: top;
+            img{
+              @include ruler(width, 140);
+            }
+            p{
+              @include ruler(height,24);
+              overflow:hidden;
+              @include font($f-yahei,12,24,#1e1e1e);
+              @include afont(#1e1e1e);
+              text-align: center;
+            }
+          }
+        }
+        .h2{
+          @include ruler(height,28);
+          overflow: hidden;
+          text-align: center;
+          @include border(1,solid,#ffa99a,-bottom);
+          img{
+            @include ruler(height,28);
+          }
+        }
+        ul.picT{
+          @include height-set();
+          @include margin(5,0,0,10);
+          li{
+            @include ruler(width,140);
+            @include margin(10,5,0,5);
+            float: left;
+            h4{
+              @include ruler(height,18);
+              @include font($f-yahei,9,18,#1e1e1e);
+              @include afont(#1e1e1e);
+            }
+            div.img{
+              @include height-set();
+              position: relative;
+              vertical-align: top;
+              img{
+                @include ruler(width,140);
+              }
+              p{
+                width: 100%;
+                @include ruler(height,16);
+                @include font($f-yahei,8,16,#fff);
+                @include afont(#fff);
+                background: rgba(0,0,0,0.5);
+                @include ruler(text-indent,5);
+                position: absolute;
+                left: 0;
+                bottom: 0;
+              }
+            }
+            div.z{
+              @include ruler(height,24);
+              @include font($f-yahei,12,24,#fff);
+              @include afont(#fff);
+              @include border(1,solid,#998f8c,-top);
+              background: #f04d32;
+              text-align: center;
+              a{
+                @include ruler(padding-left,18);
+                @include ruler(height,24);
+                background: url("../../haiwai_images/zhongqiu/zc_17.png") no-repeat left center;
+                &.active{
+                  background: url("../../haiwai_images/zhongqiu/zc_19.png") no-repeat left center;
+                  background-size: 14px 12px;
+                  background-size: rem(14) rem(12);
+                }
+                background-size: 14px 12px;
+                background-size: rem(14) rem(12);
+              }
+            }
+          }
+        }
+        ul.coop{
+          @include height-set();
+          li{
+            @include height-set();
+            @include padding(5,0,0,65);
+            position: relative;
+            span{
+              @include ruler(width,50);
+              position: absolute;
+              @include ruler(left,15);
+              @include ruler(top,5);
+              @include font($f-yahei, 8, 18, #1e1e1e);
+              @include afont(#1e1e1e);
+              display: inline-block;
+            }
+            a{
+              @include ruler(width,44);
+              @include ruler(height,16);
+              @include border(1,solid,#dfdad8,'');
+              @include margin(0,5,6,0);
+              display: inline-block;
+              img{
+                @include ruler(width,44);
+                @include ruler(height,16);
+              }
+            }
+          }
+        }
+      }
+      div.details{
+        @include ruler(height,22);
+        text-align: center;
+        overflow: hidden;
+        a{
+          @include border(1,solid,#f19896,'');
+          @include ruler(border-radius,10);
+          @include ruler(height,18);
+          @include font($f-yahei,12,18,#e44d4d);
+          @include padding(0,12,0,12);
+          display: inline-block;
+          text-decoration: none;
+
+        }
+      }
+      div.adc{
+        @include ruler(height,25);
+        @include ruler(margin-top,15);
+        overflow: hidden;
+        img{
+          width: 100%;
+          @include ruler(height,25);
+        }
+      }
+    }
+  }
+  .activityBox{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: rgba(0,0,0,0.5);
+    display: none;
+    .con{
+      @include ruler(width,274);
+      @include height-set();
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      @include ruler(margin-left,-137);
+      @include ruler(padding-bottom,25);
+      @include ruler(border-radius,18);
+      background: #fff3f0;
+      h4{
+        @include ruler(height,34);
+        overflow: hidden;
+        text-align: center;
+        @include font($f-yahei,16,34,#fff);
+        position:relative;
+        background: #ca3353;
+        a{
+          @include ruler(width,23);
+          @include ruler(height,23);
+          display: inline-block;
+          position:absolute;
+          @include ruler(right,10);
+          top: 50%;
+          @include ruler(margin-top,-11);
+          @include margin(-11,0,0,-11);
+          background: url("../../haiwai_images/zhongqiu/zc_05.png") no-repeat;
+          background-size: cover;
+        }
+      }
+      .h3{
+        @include ruler(height,34);
+        overflow: hidden;
+        img{
+          width: 100%;
+          @include ruler(height,34);
+        }
+      }
+      p{
+        @include height-set();
+        @include font($f-yahei,12,20,#1b1b1b);
+        @include afont(#1b1b1b);
+        text-indent: 2em;
+        @include padding(0,15,0,15);
+      }
+      div.b{
+        @include ruler(height,82);
+        @include ruler(margin-top,25);
+        overflow: hidden;
+        background: url("../../haiwai_images/zhongqiu/zc_10.jpg") no-repeat;
+        background-size: cover;
+        @include font($f-yahei,12,20,#1b1b1b);
+        @include afont(#1b1b1b);
+        @include ruler(padding-top,16);
+        p{
+          text-align: center;
+        }
+      }
+    }
+
+  }
+  .par{
+    .con{
+      background:#fff3f0  url("../../haiwai_images/zhongqiu/zc_15.jpg") no-repeat 0 50%;
+      background-size: 100% auto;
+      p{
+        text-indent: 1em;
+        &:before{
+          content: "★";
+          color: #ca3353;
+          @include ruler(padding-right,3);
+        }
+      }
+      div.c{
+        @include height-set();
+        overflow-x: hidden;
+        overflow-y:scroll;
+      }
+    }
+
+  }
+
+}
+@media (min-width: 769px) {
+  .activityBox{ display: none;}
+  .main{
+    @include ruler(max-width,1200);
+    overflow: hidden;
+    margin: 0 auto;
+    background:#ffeee9 url("../../haiwai_images/zhongqiu/pc.jpg") no-repeat center 396px;
+    background:#ffeee9 url("../../haiwai_images/zhongqiu/pc.jpg") no-repeat center rem(396);
+    div.banner{
+      @include ruler(height,358);
+      overflow: hidden;
+      position: relative;
+      background: url("../../haiwai_images/zhongqiu/zcpc_02.jpg") no-repeat top center;
+      p{
+        @include font($f-yahei,16,34);
+        @include afont();
+        overflow: hidden;
+        text-align: center;
+        @include margin(269,0,0,0);
+      }
+    }
+    div.nav{
+      @include ruler(height,38);
+      overflow: hidden;
+      @include font($f-yahei,18,38,#fff);
+      @include afont(#fff);
+      background: #f5652c;
+      text-align: center;
+      a{
+        @include padding(0,24,0,24);
+        display: inline-block;
+        &.active,&:hover{
+          background: #e9341f;
+        }
+      }
+    }
+    .mobile{
+      display: none;
+    }
+    .c{
+      @include ruler(max-width,980);
+      @include height-set();
+      margin: 0 auto;
+      p.dis{
+        display: none;
+      }
+      .ph1{
+        @include ruler(height,60);
+        @include ruler(margin-top,18);
+        overflow: hidden;
+        display: block;
+      }
+      .box1{
+        @include height-set();
+        @include margin(25,0,0,0);
+        .l{
+          @include ruler(width,463);
+          @include height-set();
+          float: left;
+          @include padding(0,28,0,28);
+          p{
+            @include font($f-yahei,14,24,#1e1e1e);
+            @include height-set();
+            @include afont(#1e1e1e);
+            &.t{
+              font-weight: bold;
+              color: #ff5932;
+            }
+          }
+        }
+        .r{
+          @include ruler(width,415);
+          @include height-set();
+          float: right;
+          h3{
+            @include ruler(height,46);
+            @include font($f-yahei,24,46,#db2911);
+            font-weight: bold;
+            @include afont(#db2911);
+          }
+          div.t{
+            @include height-set();
+            @include border(5,solid,#f5652c,-left);
+            @include padding(0,0,0,5);
+            p{
+              @include font($f-yahei,12,16,#1e1e1e);
+              @include afont(#1e1e1e);
+              @include height-set();
+            }
+          }
+          ul{
+            @include height-set();
+            @include margin(10,0,0,0);
+            li{
+              @include font($f-yahei,14,30,#1e1e1e);
+              @include ruler(height,30);
+              overflow: hidden;
+              a:link,a:visited{
+                color: #1e1e1e;
+                text-decoration: none;
+              }
+              a:hover,a:active{
+                color: #0327dd;
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+      }
+      .box2{
+        @include height-set();
+        @include margin(92,0,0,0);
+        ul{
+          @include height-set();
+          @include ruler(width,1000);
+          li{
+            @include height-set();
+            @include ruler(width,480);
+            @include margin(0,20,0,0);
+            float: left;
+            h4{
+              @include ruler(height,18);
+              @include font($f-yahei,18,18,#1e1e1e);
+              @include afont(#1e1e1e);
+              @include margin(0,0,0,5);
+              @include padding(0,0,0,5);
+              @include border(5,solid,#ce3b6f,-left);
+              font-weight: bold;
+            }
+            img{
+              width: 100%;
+              vertical-align: top;
+              @include margin(15,0,0,0);
+            }
+            p{
+              @include height-set();
+              @include font($f-yahei,14,24,#1e1e1e);
+              @include margin(15,0,0,0);
+              a:link,a:visited{
+                color: #314bfe;
+                text-decoration: none;
+              }
+              a:hover,a:active{
+                color: #314bfe;
+                text-decoration: underline;
+              }
+
+            }
+          }
+        }
+      }
+      .box3{
+        @include height-set();
+        @include padding(20,0,0,0);
+        div.c{
+          @include ruler(height,152);
+          overflow: hidden;
+          @include padding(0,0,0,197);
+          @include margin(12,0,0,0);
+          div.l{
+            @include ruler(width,490);
+            @include height-set();
+            float: left;
+            h4{
+              @include font($f-yahei,18,28,#1e1e1e);
+              @include afont(#1e1e1e);
+              @include height-set();
+              font-weight: bold;
+            }
+            p{
+              @include font($f-yahei,14,26,#1e1e1e);
+              @include afont(#1e1e1e);
+              @include height-set();
+            }
+          }
+          div.r{
+            @include ruler(width,292);
+            float: right;
+            overflow: hidden;
+            text-align: center;
+            @include padding(38,0,0,0);
+          }
+          &.b1{
+            background: #ffc6da url("../../haiwai_images/zhongqiu/zcpc_14.jpg") no-repeat left top;
+          }
+          &.b2{
+            background: #ffcbb8 url("../../haiwai_images/zhongqiu/zcpc_21.jpg") no-repeat left top;
+          }
+        }
+        div.g{
+          @include ruler(height,50);
+          @include font($f-yahei,14,50,#0052b9);
+          @include afont(#0052b9);
+          background: #ffdbd1;
+          @include margin(10,0,0,0);
+          text-align: center;
+        }
+      }
+      .box4{
+        @include ruler(height,228);
+        overflow: hidden;
+        width: 100%;
+        @include margin(30,0,0,0);
+        position: relative;
+        div{
+          @include ruler(height,228);
+          @include ruler(width,940);
+          overflow: hidden;
+          position: absolute;
+          @include ruler(left,25);
+          top: 0;
+          ul{
+            li{
+              @include ruler(width,300);
+              @include height-set();
+              @include margin(0,5,0,5);
+              float: left;
+              img{
+                vertical-align: top;
+              }
+              p{
+                @include font($f-yahei,14,28,#1e1e1e);
+                @include afont(#1e1e1e);
+                @include ruler(height,28);
+                overflow: hidden;
+                text-align: center;
+              }
+            }
+          }
+        }
+        span{
+          @include ruler(width,25);
+          @include ruler(height,51);
+          display: inline-block;
+          overflow: hidden;
+          position: absolute;
+          cursor: pointer;
+          top: 50%;
+          @include margin(-25,0,0,0);
+          &.l{
+            left: 0;
+            background: url("../../haiwai_images/zhongqiu/zcpc_31.png") no-repeat left center;
+          }
+          &.r{
+            right: 0;
+            background: url("../../haiwai_images/zhongqiu/zcpc_34.png") no-repeat left center;
+          }
+        }
+      }
+      .box5{
+        h4{
+          @include font($f-yahei,18,26,#1e1e1e);
+          @include height-set();
+          @include afont(#1e1e1e);
+          font-weight: bold;
+        }
+        p{
+          @include font($f-yahei,14,26,#1e1e1e);
+          @include height-set();
+          @include afont(#0051b8);
+        }
+      }
+      .box6{
+        @include height-set();
+        background: #fff;
+        @include padding(0,0,48,0);
+        h3{
+          @include ruler(height,63);
+          overflow: hidden;
+          @include margin(22,20,0,20);
+          @include border(2,solid,#ffa99a,-bottom);
+          text-align: center;
+        }
+        ul{
+          @include height-set();
+          @include margin(0,0,0,10);
+          li{
+            @include ruler(width,300);
+            @include height-set();
+            float: left;
+            @include margin(20,10,0,10);
+            h4{
+              @include font($f-yahei,18,30,#354aaa);
+              @include afont(#354aaa);
+            }
+            div.i{
+              @include height-set();
+              position: relative;
+              img{
+                @include ruler(width,300);
+                vertical-align: top;
+              }
+              p{
+                @include font($f-yahei,16,22,#fff);
+                @include afont(#fff);
+                @include padding(12,0,0,0);
+                background: rgba(0,0,0,0.5);
+                @include height-set();
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                span{
+                  float: right;
+                  @include ruler(margin-right,12);
+                  i{
+                    color: #ea3200;
+                    @include ruler(font-size,22);
+                  }
+                }
+              }
+
+            }
+            div.b{
+              @include ruler(height,50);
+              overflow: hidden;
+              background: #e9341f;
+              @include font($f-yahei,24,50,#fff);
+              @include afont(#fff);
+              text-align: center;
+              a{
+                @include ruler(height,50);
+                @include padding(0,0,0,50);
+                display: inline-block;
+                background: url("../../haiwai_images/zhongqiu/zc_17.png") no-repeat left center;
+                font-weight: bold;
+              }
+            }
+          }
+        }
+      }
+      .box7{
+        @include height-set();
+        @include padding(9,0,10,0);
+        @include margin(0,0,40,0);
+        background: #fff;
+        h3{
+          @include font($f-yahei,16,20);
+          @include afont();
+          @include border(5,solid,#ff4309,-left);
+          @include padding(0,0,0,8);
+        }
+        .l{
+          @include ruler(width,266);
+          @include height-set();
+          @include margin(0,0,0,18);
+          @include border(2,solid,#317cdb,-top);
+          float: left;
+          h4{
+            @include font($f-yahei,14,34);
+            @include afont();
+            @include margin(10,0,0,0);
+            font-weight: bold;
+          }
+          div.b{
+            @include height-set();
+            @include border(1,dotted,#c0c0c0,-bottom);
+            @include padding(0,0,9,0);
+            div.i{
+              @include ruler(width,120);
+              @include ruler(height,80);
+              float: left;
+              img{
+                vertical-align: top;
+              }
+            }
+            p{
+              @include ruler(width,140);
+              @include height-set();
+              float: right;
+              @include font($f-simsun,12,26,#656565);
+              @include afont(#eb192d);
+            }
+          }
+          ul{
+            @include height-set();
+            li{
+              @include font($f-simsun,14,24,#1e1e1e);
+              @include afont(#1e1e1e);
+              a:hover,a:active{
+                color: #0327dd;
+                text-decoration: underline;
+              }
+              @include ruler(height,24);
+              overflow: hidden;
+              @include padding(0,0,0,10);
+              background: url("../../haiwai_images/zhongqiu/d.jpg") no-repeat left center;
+            }
+          }
+        }
+        .c{
+          @include ruler(width,272);
+          @include height-set();
+          @include border(1,solid,#f4f4f4,-left);
+          @include border(1,solid,#f4f4f4,-right);
+          @include border(2,solid,#4e4e4e,-top);
+          @include padding(0,0,0,11);
+          @include margin(0,0,0,10);
+          float: left;
+          background: #f9f9f9;
+          div.i{
+            @include height-set();
+            @include margin(20,0,0,0);
+          }
+          ul{
+            @include height-set();
+            @include margin(15,0,0,0);
+            li{
+              @include font($f-simsun,14,28,#1e1e1e);
+              @include afont(#1e1e1e);
+              @include ruler(height,28);
+              @include padding(0,0,0,8);
+              overflow: hidden;
+              a:hover,a:active{
+                color: #0327dd;
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+        .r{
+          @include ruler(width,386);
+          @include margin(0,4,0,0);
+          @include height-set();
+          float: right;
+        }
+      }
+    }
+    div.list{
+      @include height-set();
+      ul.coop{
+        @include height-set();
+        li{
+          @include height-set();
+          @include padding(0,0,0,90);
+          @include margin(20,0,0,0);
+          position: relative;
+          span{
+            @include ruler(width,80);
+            position: absolute;
+            left: 0;
+            top: 0;
+            @include font($f-yahei, 18, 26, #1e1e1e);
+            @include afont(#1e1e1e);
+            font-weight: bold;
+            display: inline-block;
+          }
+          a{
+            @include ruler(width,120);
+            @include ruler(height,43);
+            @include border(1,solid,#dfdad8,'');
+            @include margin(0,20,6,0);
+            display: inline-block;
+            img{
+              @include ruler(width,120);
+              @include ruler(height,43);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.mt2{
+  @include ruler(margin-top,2);
+}
+.mt6{
+  @include ruler(margin-top,6);
+}
+.mt8{
+  @include ruler(margin-top,8);
+}
+.mt10{
+  @include ruler(margin-top,10);
+}
+.mt14{
+  @include ruler(margin-top,14);
+}
+
+.mt25{
+  @include ruler(margin-top,25);
+}

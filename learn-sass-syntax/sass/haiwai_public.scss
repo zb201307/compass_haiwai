@@ -9,3 +9,6 @@ html,body{
 }
 @include haiwai_nav();
 @include haiwai_footer();
+strong{
+  font-weight: bold;
+}

@@ -43,7 +43,7 @@
     overflow: hidden;
     position: relative;
     span.l{
-      @include ruler(width,48);
+      @include ruler(width,60);
       @include ruler(height,28);
       background:url("../xjp_images/m.jpg") no-repeat left 1px;
       background:url("../xjp_images/m.jpg") no-repeat left rem(1);
@@ -66,6 +66,7 @@
         @include ruler(height,30);
         overflow: hidden;
         text-align: left;
+        float: left;
         span.c{
           i{
             font-style: normal;
@@ -84,7 +85,7 @@
     @media (max-width: 768px) {
       height: auto;
       span.l{
-        width: rem(56);
+        width: rem(68);
        @include padding(1,12,1,30);
        //border: 0;
       }
@@ -217,6 +218,9 @@
           background: url("../xjp_images/d.png") no-repeat 5px center;
           background: url("../xjp_images/d.png") no-repeat rem(5) center;
           @include afont();
+          a:hover,a:active{
+            text-decoration: underline;
+          }
         }
       }
     }
@@ -243,6 +247,7 @@
           top: 0;
           li{
             @include ruler(height,65);
+            overflow: hidden;
             span{
               @include padding(0,0,0,10);
               display: inline-block;
@@ -270,7 +275,7 @@
         @include padding(0,0,15,0);
         a{
           background: url("../xjp_images/b.png") no-repeat;
-          background-size:cover;
+          background-size:contain;
           @include ruler(height,43);
           @include ruler(width,125);
           display: inline-block;
@@ -405,7 +410,7 @@
             overflow: hidden;
             float: right;
             h5{
-              @include font($f-simsun,12,18);
+              @include font($f-simsun,16,18);
               @include afont();
             }
             p{
@@ -422,7 +427,7 @@
             li{
               @include ruler(height,28);
               overflow: hidden;
-              @include font($f-simsun,14,28);
+              @include font($f-simsun,12,28);
               @include afont();
               a:hover,a:active{
                 text-decoration:underline;

@@ -19,11 +19,10 @@
     div.mes{
       position: relative;
       @include padding(0,0,26,0);
+      @include height-set();
       ul{
         @include margin(0,30,0,30);
         height: auto;
-        overflow-y: scroll;
-        overflow-x:hidden;
         li{
           @include height-set();
           position: relative;
@@ -37,7 +36,7 @@
             background-color: #e4f3ff;
             h5{
               @include height-set();
-              @include font($f-simsun,14,22);
+              @include font($f-yahei,14,22,#669900);
               @include margin(12,40,0,0);
               position: relative;
             }
@@ -45,12 +44,26 @@
               @include height-set();
               @include font($f-simsun,12,24);
               @include margin(10,0,0,0);
+              a{
+                @include ruler(margin-left,10);
+                color: #ff3300;
+              }
             }
             div.img{
               @include height-set();
               img{
                 @include margin(10,10,0,0);
                 cursor: pointer;
+              }
+            }
+            div.video{
+              width: 100%;
+              height: auto;
+              position: relative;
+              z-index: 0;
+              video{
+                position: relative;
+                z-index: -1;
               }
             }
             div.time{
@@ -103,6 +116,24 @@
         @include height-set();
         border:1px solid #aabdcc;
         float: left;
+        div.chec{
+          @include font($f-yahei,16,34);
+          @include ruler(height,34);
+          @include margin(0,30,0,0);
+          overflow: hidden;
+          text-align: right;
+          @include afont();
+          a{
+            @include padding(0,0,0,30);
+            @include ruler(height,34);
+            overflow: hidden;
+            background: url("../images/z1.jpg") no-repeat left center;
+            display: inline-block;
+            &.active{
+              background: url("../images/z2.jpg") no-repeat left center;
+            }
+          }
+        }
         h2{
           color: #437398;
         }
@@ -143,7 +174,7 @@
             li{
               div.mescon{
                 h5{
-                  color: #005f8b;
+                  color: #01608e;
                 }
                 p{
                   color: #333333;
@@ -227,19 +258,19 @@
   }
 }
 h1{
-  @include font($f-yahei,40,48,#1a88c0);
+  @include font($f-yahei,32,48,#1a88c0);
   @include margin(48,0,0,0);
-  @include padding(0,80,48,80);
+  @include padding(0,80,28,80);
   text-align: center;
   overflow: hidden;
 }
 .description{
-  @include font($f-yahei,18,28,#333);
+  @include font($f-yahei,16,28,#333);
   @include padding(0,36,0,36);
 }
 .count{
   @include font($f-yahei,16,24,#1a88c0);
-  @include margin(30,0,0,0);
+  @include margin(20,0,0,0);
   @include padding(0,0,0,32);
 }
 .succMess{
@@ -310,7 +341,14 @@ h1{
         ul{
           @include margin(0,10,0,10);
           li{
-
+            div.mescon{
+              h5{
+                font-size: rem(16);
+              }
+              p{
+                font-size: rem(14);
+              }
+            }
           }
         }
       }
@@ -323,6 +361,12 @@ h1{
           h2{
             display: none;
           }
+          div.chec{
+            font-size: rem(14);
+            a{
+              background-size: 25% auto;
+            }
+          }
           div.mes{
             ul{
               li{
@@ -330,6 +374,7 @@ h1{
                   h5{
                   }
                   p{
+                    @include afont(#f00);
                   }
                   span.arrow{
                   }
@@ -380,6 +425,7 @@ h1{
       bottom: 0;
       padding: 0;
       margin: 0;
+      z-index: 99999;
       h5{
         display: none;
       }
@@ -405,17 +451,17 @@ h1{
     }
   }
   h1{
-    font-size: rem(24);
-    line-height: rem(32);
+    font-size: rem(16);
+    line-height: rem(26);
     @include padding(18,5,18,5);
     background-color: #1b88c1;
     color: #fff;
     margin: 0;
-    text-align: left;
-    letter-spacing: rem(4);
+    text-align:center;
+    //letter-spacing: rem(4);
   }
   .description{
-    @include font($f-yahei,14,20);
+    @include font($f-yahei,12,20);
     @include padding(12,8,12,8);
     letter-spacing:rem(1);
   }
@@ -551,4 +597,8 @@ h1{
       @include ruler(margin-top,10);
     }
   }
+}
+
+.main .main-con .message-version div.mes ul li div.mescon h5{
+  color: #01608e;
 }

@@ -2,6 +2,7 @@
   max-width: 980px;
   max-width: #{(980/16)}rem;;
 }
+
 $f-yahei:Microsoft YaHei;
 $f-heiti:SimHei,Helvetica,Arial,Verdana,sans-serif;
 $f-simsun:SimSun,Helvetica,Arial,Verdana,sans-serif;
@@ -10,6 +11,10 @@ $f-s:16px;
 $f:16;
 @function rem($s:0){                       //函数：设计rem值
   @return #{($s/$f)}rem;
+}
+@mixin height-set($height:auto){
+  height: $height;
+  overflow: hidden;
 }
 @mixin font($f,$s,$h,$c:#000){
   font:{
