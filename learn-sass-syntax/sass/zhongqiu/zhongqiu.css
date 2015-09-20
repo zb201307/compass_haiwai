@@ -3,11 +3,11 @@ Error: File to import not found or unreadable: haiwai.
         on line 1 of zhongqiu.scss
 
 1: @import "haiwai";
-2: @media (max-width: 768px) {
-3:   .main{
-4:     @include ruler(max-width,768);
-5:     @include height-set();
-6:     background: #ffeee9;
+2: body{
+3:   background:#ffeee9;
+4: }
+5: @media (max-width: 768px) {
+6:   .main{
 
 Backtrace:
 zhongqiu.scss:1
@@ -53,4 +53,4 @@ C:/Ruby22-x64/bin/scss:23:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: File to import not found or unreadable: haiwai.\A         on line 1 of zhongqiu.scss\A \A 1: @import \"haiwai\";\A 2: @media (max-width: 768px) {\A 3:   .main{\A 4:     @include ruler(max-width,768);\A 5:     @include height-set();\A 6:     background: #ffeee9;"; }
+  content: "Error: File to import not found or unreadable: haiwai.\A         on line 1 of zhongqiu.scss\A \A 1: @import \"haiwai\";\A 2: body{\A 3:   background:#ffeee9;\A 4: }\A 5: @media (max-width: 768px) {\A 6:   .main{"; }

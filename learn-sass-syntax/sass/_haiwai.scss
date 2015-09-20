@@ -144,3 +144,10 @@ $f:16;
     }
   }
 }
+@mixin pre($name,$v){
+  -webkit-#{$name}:$v;
+  -moz-#{$name}:$v;
+  -o-#{$name}:$v;
+  -ms-#{$name}:$v;
+  #{$name}:$v;
+}

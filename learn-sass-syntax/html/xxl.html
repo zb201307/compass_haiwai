@@ -440,7 +440,7 @@
         });
         $dragBln = false;
         var s=3000;
-        $(".main_image").each(function(e){
+        $(".slides .main_image").each(function(e){
             var _this=this;
             var len=$(this).find('li').length;
             var h_a='';
@@ -451,8 +451,8 @@
             $(this).touchSlider({
                 flexible: true,
                 speed: 200,
-                btn_prev: $(_this).parent().find(".btn_prev"),
-                btn_next: $(_this).parent().find(".btn_next"),
+                btn_prev: $(_this).parent().find(".slides .btn_prev"),
+                btn_next: $(_this).parent().find(".slides .btn_next"),
                 paging: $(_this).parent().find(".flicking_con a"),
                 counter: function (e) {
                     $(_this).parent().find(".flicking_con a").removeClass("on").eq(e.current - 1).addClass("on");
@@ -492,12 +492,12 @@
 
         });
 
-        $(".main_image img").each(function () {
+        $(".slides .main_image img").each(function () {
             var ww = $(".main_image").width();
             var w = $(this).width();
             var ml = Math.round((parseInt(ww) - parseInt(w)) / 2);
             //$(this).css({ marginLeft: ml + "px" })
-        })
+        });
 
 
         //天气

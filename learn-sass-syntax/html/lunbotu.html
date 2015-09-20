@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<script>
+    $(function(){
+        !function(){
+            $('.slides').each(function(e){
+                $(this).hover(function () {
+                    $(this).parent().find(".btn_prev,.btn_next").fadeIn();
+                }, function () {
+                    $(this).parent().find(".btn_prev,.btn_next").fadeOut();
+                });
+            });
+            $dragBln = false;
+            var s=3000;
+            $(".main_image").each(function(e){
+                var _this=this;
+                var len=$(this).find('li').length;
+                var h_a='';
+                for(var i= 0;i<len;i++){
+                    h_a+='<a href="javascript:;"></a>';
+                }
+                $(this).parent().find('.flicking_con').html(h_a);
+                $(this).touchSlider({
+                    flexible: true,
+                    speed: 200,
+                    btn_prev: $(_this).parent().find(".btn_prev"),
+                    btn_next: $(_this).parent().find(".btn_next"),
+                    paging: $(_this).parent().find(".flicking_con a"),
+                    counter: function (e) {
+                        $(_this).parent().find(".flicking_con a").removeClass("on").eq(e.current - 1).addClass("on");
+                    }
+                });
+                $(this).bind("mousedown", function () {
+                    $dragBln = false;
+                });
+                $(this).bind("dragstart", function () {
+                    $dragBln = true;
+                });
+                $(this).find('a').click(function () {
+                    if ($dragBln) {
+                        return false;
+                    }
+                });
+                clearInterval(_this.timer);
+                _this.timer = setInterval(function () {
+                    $(_this).parent().find(".btn_next").click();
+                }, s);
+                $(this).hover(function () {
+                    clearInterval(_this.timer);
+                }, function () {
+                    clearInterval(_this.timer);
+                    _this.timer = setInterval(function () {
+                        $(_this).parent().find(".btn_next").click();
+                    }, s);
+                });
+                $(this).bind("touchstart", function () {
+                    clearInterval(_this.timer);
+                }).bind("touchend", function () {
+                    clearInterval(_this.timer);
+                    _this.timer = setInterval(function () {
+                        $(_this).parent().find(".btn_next").click();
+                    }, s);
+                });
+
+            });
+
+            $(".main_image img").each(function () {
+                var ww = $(".main_image").width();
+                var w = $(this).width();
+                var ml = Math.round((parseInt(ww) - parseInt(w)) / 2);
+                //$(this).css({ marginLeft: ml + "px" })
+            });
+        }();
+    })
+</script>
+</body>
+
+</html>

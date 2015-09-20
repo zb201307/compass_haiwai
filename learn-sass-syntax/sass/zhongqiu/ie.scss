@@ -1,0 +1,539 @@
+@import "haiwai";
+.activityBox{ display: none;}
+.main{
+  @include ruler(max-width,1200);
+  @include padding(0,0,20,0);
+  overflow: hidden;
+  margin: 0 auto;
+  background:#ffeee9 url("../../haiwai_images/zhongqiu/pc.jpg") no-repeat center 396px;
+  background:#ffeee9 url("../../haiwai_images/zhongqiu/pc.jpg") no-repeat center rem(396);
+  div.banner{
+    @include ruler(height,358);
+    overflow: hidden;
+    position: relative;
+    background: url("../../haiwai_images/zhongqiu/zcpc_02.jpg") no-repeat top center;
+    p{
+      @include font($f-yahei,16,34);
+      @include afont();
+      overflow: hidden;
+      text-align: center;
+      margin: 269px auto 0 auto;
+      margin:rem(269) auto 0 auto;
+      width: 60%;
+    }
+  }
+  div.nav{
+    @include ruler(height,38);
+    @include ruler(width,1200);
+    overflow: hidden;
+    @include font($f-yahei,18,38,#fff);
+    @include afont(#fff);
+    background: #f5652c;
+    text-align: center;
+    a{
+      @include padding(0,24,0,24);
+      display: inline-block;
+      &.active,&:hover{
+        background: #e9341f;
+      }
+    }
+  }
+  .mobile{
+    display: none;
+  }
+  .c{
+    @include ruler(max-width,980);
+    @include height-set();
+    margin: 0 auto;
+    p.dis{
+      display: none;
+    }
+    .ph1{
+      @include ruler(height,60);
+      @include ruler(margin-top,18);
+      overflow: hidden;
+      display: block;
+    }
+    .box1{
+      @include height-set();
+      @include margin(25,0,0,0);
+      .l{
+        @include ruler(width,463);
+        @include height-set();
+        float: left;
+        @include padding(0,28,0,28);
+        p{
+          @include font($f-yahei,14,24,#1e1e1e);
+          @include height-set();
+          @include afont(#1e1e1e);
+          &.t{
+            font-weight: bold;
+            color: #ff5932;
+          }
+        }
+      }
+      .r{
+        @include ruler(width,415);
+        @include height-set();
+        float: right;
+        h3{
+          @include ruler(height,46);
+          @include font($f-yahei,24,46,#db2911);
+          font-weight: bold;
+          @include afont(#db2911);
+        }
+        div.t{
+          @include height-set();
+          @include border(5,solid,#f5652c,-left);
+          @include padding(0,0,0,5);
+          p{
+            @include font($f-yahei,12,16,#1e1e1e);
+            @include afont(#1e1e1e);
+            @include height-set();
+          }
+        }
+        ul{
+          @include height-set();
+          @include margin(10,0,0,0);
+          li{
+            @include font($f-yahei,14,30,#1e1e1e);
+            @include ruler(height,30);
+            overflow: hidden;
+            a:link,a:visited{
+              color: #1e1e1e;
+              text-decoration: none;
+            }
+            a:hover,a:active{
+              color: #0327dd;
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+    .box2{
+      @include height-set();
+      @include margin(92,0,0,0);
+      ul{
+        @include height-set();
+        @include ruler(width,1000);
+        li{
+          @include height-set();
+          @include ruler(width,480);
+          @include margin(0,20,0,0);
+          float: left;
+          h4{
+            @include ruler(height,18);
+            @include font($f-yahei,18,18,#1e1e1e);
+            @include afont(#1e1e1e);
+            @include margin(0,0,0,5);
+            @include padding(0,0,0,5);
+            @include border(5,solid,#ce3b6f,-left);
+            font-weight: bold;
+          }
+          img{
+            width: 100%;
+            vertical-align: top;
+            @include margin(15,0,0,0);
+          }
+          p{
+            @include height-set();
+            @include font($f-yahei,14,24,#1e1e1e);
+            @include margin(15,0,0,0);
+            a:link,a:visited{
+              color: #314bfe;
+              text-decoration: none;
+            }
+            a:hover,a:active{
+              color: #314bfe;
+              text-decoration: underline;
+            }
+
+          }
+        }
+      }
+    }
+    .box3{
+      @include height-set();
+      @include padding(20,0,0,0);
+      div.c{
+        @include ruler(height,127);
+        overflow: hidden;
+        @include padding(25,0,0,197);
+        @include margin(12,0,0,0);
+        div.l{
+          @include ruler(width,490);
+          @include height-set();
+          float: left;
+          h4{
+            @include font($f-yahei,18,28,#1e1e1e);
+            @include afont(#1e1e1e);
+            @include height-set();
+            font-weight: bold;
+          }
+          p{
+            @include font($f-yahei,14,26,#1e1e1e);
+            @include afont(#1e1e1e);
+            @include height-set();
+          }
+        }
+        div.r{
+          @include ruler(width,292);
+          float: right;
+          overflow: hidden;
+          text-align: center;
+          @include padding(13,0,0,0);
+        }
+        &.b1{
+          background: #ffc6da url("../../haiwai_images/zhongqiu/zcpc_14.jpg") no-repeat left top;
+        }
+        &.b2{
+          background: #ffcbb8 url("../../haiwai_images/zhongqiu/zcpc_21.jpg") no-repeat left top;
+        }
+      }
+      div.g{
+        @include ruler(height,50);
+        @include font($f-yahei,14,50,#0052b9);
+        @include afont(#0052b9);
+        background: #ffdbd1;
+        @include margin(10,0,0,0);
+        text-align: center;
+      }
+    }
+    .box4{
+      @include ruler(height,228);
+      overflow: hidden;
+      width: 100%;
+      @include margin(30,0,0,0);
+      position: relative;
+      div{
+        @include ruler(height,228);
+        @include ruler(width,930);
+        overflow: hidden;
+        position: absolute;
+        @include ruler(left,25);
+        top: 0;
+        position: relative;
+        ul{
+          @include height-set();
+          position: absolute;
+          left:0;
+          top:0;
+          li{
+            @include ruler(width,300);
+            @include height-set();
+            @include margin(0,5,0,5);
+            float: left;
+            img{
+              vertical-align: top;
+            }
+            p{
+              @include font($f-yahei,14,28,#1e1e1e);
+              @include afont(#1e1e1e);
+              @include ruler(height,28);
+              overflow: hidden;
+              text-align: center;
+            }
+          }
+        }
+      }
+      span{
+        @include ruler(width,25);
+        @include ruler(height,51);
+        display: inline-block;
+        overflow: hidden;
+        position: absolute;
+        cursor: pointer;
+        top: 50%;
+        @include margin(-25,0,0,0);
+        &.l{
+          left: 0;
+          background: url("../../haiwai_images/zhongqiu/zcpc_31.png") no-repeat left center;
+        }
+        &.r{
+          right: 0;
+          background: url("../../haiwai_images/zhongqiu/zcpc_34.png") no-repeat left center;
+        }
+      }
+    }
+    .box5{
+      @include height-set();
+      @include margin(35,0,0,0);
+      h4{
+        @include font($f-yahei,18,26,#1e1e1e);
+        @include height-set();
+        @include afont(#1e1e1e);
+        font-weight: bold;
+      }
+      p{
+        @include font($f-yahei,14,26,#1e1e1e);
+        @include height-set();
+        @include afont(#0051b8);
+      }
+    }
+    .box6{
+      @include height-set();
+      background: #fff;
+      @include padding(0,0,48,0);
+      box-shadow: 0 rem(2) rem(5) rgba(0,0,0,0.3);
+
+      h3{
+        @include ruler(height,63);
+        overflow: hidden;
+        @include margin(22,20,0,20);
+        @include border(2,solid,#ffa99a,-bottom);
+        text-align: center;
+        a.gd{
+          float: right;
+          @include ruler(margin-top,31);
+          @include ruler(margin-right,10);
+          @include font($f-yahei,14,32,#0052b9);
+          display: inline-block;
+          text-decoration: none;
+          &:hover,&:active{
+            text-decoration: underline;
+          }
+        }
+      }
+      ul{
+        @include height-set();
+        @include margin(0,0,0,10);
+        li{
+          @include ruler(width,300);
+          @include height-set();
+          float: left;
+          &:hover,&:active{
+            div.b{ background: #f5652c;}
+          }
+          &.active{
+            div.b{
+              background: #6c6c6c;
+            }
+          }
+          @include margin(20,10,0,10);
+          h4{
+            @include ruler(height,30);
+            overflow: hidden;
+            @include font($f-yahei,18,30,#354aaa);
+            @include afont(#354aaa);
+          }
+          div.i{
+            @include height-set();
+            position: relative;
+            font-style: normal;
+            img{
+              @include ruler(width,300);
+              @include ruler(height,226);
+              vertical-align: top;
+            }
+            p{
+              @include font($f-yahei,16,22,#fff);
+              @include afont(#fff);
+              @include padding(12,0,0,5);
+              background: rgba(0,0,0,0.5);
+              @include height-set();
+              position: absolute;
+              left: 0;
+              bottom: 0;
+              width: 100%;
+              span{
+                float: right;
+                @include ruler(margin-right,12);
+                i{
+                  font-style: normal;
+                  color: #ea3200;
+                  @include ruler(font-size,22);
+                }
+              }
+            }
+
+          }
+          div.b{
+            @include ruler(height,50);
+            overflow: hidden;
+            background: #e9341f;
+            @include font($f-yahei,24,50,#fff);
+            @include afont(#fff);
+            text-align: center;
+            a{
+              @include ruler(height,50);
+              @include padding(0,0,0,50);
+              display: inline-block;
+              background: url("../../haiwai_images/zhongqiu/zc_17.png") no-repeat left center;
+              font-weight: bold;
+            }
+          }
+        }
+      }
+      div#page{
+        @include ruler(height,36);
+        @include margin(60,0,0,0);
+        overflow: hidden;
+        text-align: center;
+        a{
+          @include ruler(height,32);
+          overflow: hidden;
+          text-decoration: none;
+          @include font($f-yahei,13,32,#969696);
+          @include margin(0,4,0,4);
+          border: 1px solid #fff;
+          display: inline-block;
+        }
+        a.cur{
+          color:#354aaa;
+          text-decoration: underline;
+        }
+        a.box{
+          @include ruler(height,32);
+          @include ruler(width,70);
+          text-align: center;
+          overflow: hidden;
+          display: inline-block;
+          @include font($f-yahei,14,32,#354aaa);
+          border: 1px solid #bebebe;
+          &:hover,&:active{
+            background: #ebebeb;
+            text-decoration: underline;
+          }
+        }
+        a.noclick{
+          color: #969696;
+          background: #ebebeb;
+          &:hover,&active{
+            text-decoration: none;
+          }
+        }
+      }
+    }
+    .box7{
+      @include height-set();
+      @include padding(9,0,10,0);
+      @include margin(0,0,40,0);
+      background: #fff;
+      h3{
+        @include font($f-yahei,16,20);
+        @include afont();
+        @include border(5,solid,#ff4309,-left);
+        @include padding(0,0,0,8);
+        @include margin(16,0,0,0);
+      }
+      .l{
+        @include ruler(width,266);
+        @include height-set();
+        @include margin(0,0,0,18);
+        @include border(2,solid,#317cdb,-top);
+        float: left;
+        h4{
+          @include font($f-yahei,14,34);
+          @include afont();
+          @include margin(10,0,0,0);
+          font-weight: bold;
+        }
+        div.b{
+          @include height-set();
+          @include border(1,dotted,#c0c0c0,-bottom);
+          @include padding(0,0,9,0);
+          div.i{
+            @include ruler(width,120);
+            @include ruler(height,80);
+            float: left;
+            img{
+              vertical-align: top;
+            }
+          }
+          p{
+            @include ruler(width,140);
+            @include height-set();
+            float: right;
+            @include font($f-simsun,12,26,#656565);
+            @include afont(#eb192d);
+          }
+        }
+        ul{
+          @include height-set();
+          li{
+            @include font($f-simsun,14,24,#1e1e1e);
+            @include afont(#1e1e1e);
+            a:hover,a:active{
+              color: #0327dd;
+              text-decoration: underline;
+            }
+            @include ruler(height,24);
+            overflow: hidden;
+            @include padding(0,0,0,10);
+            background: url("../../haiwai_images/zhongqiu/d.jpg") no-repeat left center;
+          }
+        }
+      }
+      .c{
+        @include ruler(width,272);
+        @include height-set();
+        @include border(1,solid,#f4f4f4,-left);
+        @include border(1,solid,#f4f4f4,-right);
+        @include border(2,solid,#4e4e4e,-top);
+        @include padding(0,0,0,11);
+        @include margin(0,0,0,10);
+        float: left;
+        background: #f9f9f9;
+        div.i{
+          @include height-set();
+          @include margin(20,0,0,0);
+        }
+        ul{
+          @include height-set();
+          @include margin(15,0,0,0);
+          li{
+            @include font($f-simsun,14,28,#1e1e1e);
+            @include afont(#1e1e1e);
+            @include ruler(height,28);
+            @include padding(0,0,0,8);
+            overflow: hidden;
+            a:hover,a:active{
+              color: #0327dd;
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+      .r{
+        @include ruler(width,386);
+        @include margin(0,4,0,0);
+        @include height-set();
+        float: right;
+      }
+    }
+  }
+  div.list{
+    @include height-set();
+    ul.coop{
+      @include height-set();
+      li{
+        @include height-set();
+        @include padding(0,0,0,90);
+        @include margin(20,0,0,0);
+        position: relative;
+        span{
+          @include ruler(width,80);
+          position: absolute;
+          left: 0;
+          top: 0;
+          @include font($f-yahei, 18, 26, #1e1e1e);
+          @include afont(#1e1e1e);
+          font-weight: bold;
+          display: inline-block;
+        }
+        a{
+          @include ruler(width,120);
+          @include ruler(height,43);
+          @include border(1,solid,#dfdad8,'');
+          @include margin(0,20,6,0);
+          display: inline-block;
+          img{
+            @include ruler(width,120);
+            @include ruler(height,43);
+          }
+        }
+      }
+    }
+  }
+}
