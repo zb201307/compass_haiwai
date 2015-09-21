@@ -12,7 +12,7 @@
     overflow: hidden;
     width: 100%;
     .c{
-      @include ruler(widht,980);
+      @include ruler(width,980);
       @include ruler(height,46);
       overflow: hidden;
       margin: 0 auto;
@@ -30,7 +30,7 @@
   }
   .main{
     @include ruler(width,980);
-    @include height-set();
+    height: auto;
     margin: 0 auto;
     .th1{
       @include height-set();
@@ -361,15 +361,16 @@
       }
     }
     .list3{
-      @include height-set();
+      @include ruler(height,330);
+      overflow: hidden;
       .l{
         @include ruler(width,680);
         @include ruler(height,330);
-        overflow: hidden;
+        overflow-y: auto;
         float: left;
         background: #769fc5;
         .c{
-          @include height-set();
+          height: auto;
           display: none;
           .box{
             @include ruler(height,150);
@@ -383,7 +384,7 @@
             }
             .rn{
               @include ruler(height,150);
-              @include ruler(width,383);
+              @include ruler(width,353);
               @include padding(0,20,0,20);
               float: left;
               position: relative;
@@ -544,7 +545,7 @@
       .l{
         @include ruler(height,555);
         overflow: hidden;
-        overflow-y: scroll;
+        overflow-y: auto;
         @include ruler(width,489);
         @include ruler(padding-bottom,22);
         float: left;
@@ -554,7 +555,7 @@
       .r{
         @include ruler(height,555);
         overflow: hidden;
-        overflow-y: scroll;
+        overflow-y: auto;
         @include ruler(width,489);
         @include ruler(padding-bottom,22);
         float: right;
@@ -947,7 +948,7 @@
   }
   .maps{
     @include ruler(width,980);
-    @include height-set();
+    height: auto;
     margin: 0 auto;
     .tit{
       @include ruler(height,42);
@@ -969,11 +970,9 @@
         }
       }
     }
-
     .map{
       @include ruler(width,980);
       @include ruler(height,532);
-      overflow: hidden;
       margin: 0 auto;
       background:#ebf0f4 url("../../../haiwai_images/xifangmei/usa.jpg") no-repeat;
       background-size: contain;
@@ -994,7 +993,6 @@
         }
         .xs,.hs,.js,.dxs{
           position: absolute;
-          overflow: hidden;
           display: inline-block;
           z-index: 1;
         }
@@ -1162,11 +1160,85 @@
         }
       }
     }
+    .con{
+      @include ruler(width,200);
+      @include height-set();
+      position: absolute;
+      display: none;
+      @include ruler(transition,1s all ease);
+      h4{
+        @include ruler(height,34);
+        @include ruler(padding-top,6);
+        @include font($f-yahei,14,34,#eeba1a);
+        @include afont(#eeba1a);
+        @include ruler(text-indent,12);
+        @include ruler(padding-left,15);
+        @include ruler(padding-right,15);
+        a:hover,a:active{
+          text-decoration: underline;
+        }
+        overflow: hidden;
+        background: rgba(0,0,0,0.3);
+      }
+      .b{
+        @include height-set();
+        @include ruler(margin-top,1);
+        background: rgba(0,0,0,0.3);
+
+        h5{
+          @include height-set();
+          @include font($f-yahei,14,24,#fff);
+          @include afont(#fff);
+          a:hover,a:active{
+            text-decoration: underline;
+          }
+          @include ruler(padding-left,15);
+          @include ruler(padding-right,15);
+        }
+        p{
+          @include height-set();
+          @include font($f-yahei,12,22,#fff);
+          @include afont(#fff);
+          @include ruler(padding-top,5);
+          a:hover,a:active{
+            text-decoration: underline;
+          }
+          @include ruler(padding-left,15);
+          @include ruler(padding-right,15);
+        }
+        div{
+          @include height-set();
+          @include margin(5,0,5,0);
+          text-align: center;
+          img{
+            @include ruler(max-width,200);
+          }
+        }
+        ul{
+          @include height-set();
+          @include border(1,dotted,#333,-top);
+          @include margin(5);
+          li{
+            @include ruler(height,26);
+            overflow: hidden;
+            @include font($f-yahei,12,26,#fff);
+            @include ruler(padding-left,28);
+            @include ruler(padding-right,15);
+            background: url("../../../haiwai_images/xifangmei/zm_96.png") no-repeat 11px center;
+            background: url("../../../haiwai_images/xifangmei/zm_96.png") no-repeat rem(11) center;
+            @include afont(#fff);
+            a:hover,a:active{
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
   }
 }
 @media (max-width: 768px) {
   .banner{
-    height: rem(100);
+    height: rem(243);
     overflow: hidden;
     background:#10479c url("../../../haiwai_images/xifangmei/zm_02.jpg") no-repeat top center;
     background-size: contain;
@@ -1195,7 +1267,7 @@
   }
   .main{
     width: 100%;
-    @include height-set();
+    height: auto;
     margin: 0 auto;
     .th1{
       @include height-set();
@@ -1697,7 +1769,7 @@
       .l{
         @include ruler(height,555);
         overflow: hidden;
-        overflow-y: scroll;
+        overflow-y: auto;
         width: 100%;
         @include ruler(padding-bottom,22);
         float: left;
@@ -1707,7 +1779,7 @@
       .r{
         @include ruler(height,555);
         overflow: hidden;
-        overflow-y: scroll;
+        overflow-y: auto;
         width: 100%;
         @include ruler(padding-bottom,22);
         float: right;
@@ -2099,7 +2171,6 @@
     width: 100%;
     @include height-set();
     margin: 0 auto;
-
     .tit{
       @include ruler(height,42);
       background: url("../../../haiwai_images/xifangmei/mt1.jpg") repeat-x;
