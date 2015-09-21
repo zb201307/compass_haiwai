@@ -9,6 +9,7 @@
   @include border(4,solid,#ce3531,-top);
   background: #000000;
   overflow: hidden;
+  width: 100%;
   .c{
     @include ruler(widht,980);
     @include ruler(height,46);
@@ -40,6 +41,15 @@
     overflow: hidden;
     @include ruler(text-indent,30);
     @include border(4,solid,#769fc5,-top);
+    a.gd{
+      @include font($f-yahei,14,50);
+      @include afont();
+      float: right;
+      @include ruler(margin-right,10);
+      a:hover,a:active{
+        text-decoration: underline;
+      }
+    }
   }
   .list1{
     .navt{
@@ -103,14 +113,16 @@
         @include afont(#b90c12);
         a.gd{
           @include ruler(height,16);
-          @include font($f-arial,12,16,#fff);
+          @include font($f-arial,12,16,#000);
           float: right;
           @include padding(0,9,0,9);
           display: inline-block;
           @include ruler(margin-top,8);
-          background: #6f6e6d;
           @include ruler(border-radius,2);
           font-weight: 100;
+          a:hover,a:active{
+            text-decoration: underline;
+          }
         }
       }
       .l{
@@ -320,7 +332,7 @@
       h4{
         @include height-set();
         @include font($f-yahei,14,30);
-        @include ruler(margin-top,18);
+        @include ruler(margin-top,8);
         @include afont();
         font-weight: bold;
         a:hover,a:active{
@@ -529,7 +541,9 @@
       }
     }
     .l{
-      @include height-set();
+      @include ruler(height,555);
+      overflow: hidden;
+      overflow-y: scroll;
       @include ruler(width,489);
       @include ruler(padding-bottom,22);
       float: left;
@@ -537,7 +551,9 @@
       background-size: contain;
     }
     .r{
-      @include height-set();
+      @include ruler(height,555);
+      overflow: hidden;
+      overflow-y: scroll;
       @include ruler(width,489);
       @include ruler(padding-bottom,22);
       float: right;
@@ -800,9 +816,29 @@
         ul{
           li{
             div{
-              @include ruler(width,980);
-              @include ruler(left,10);
-              @include ruler(bottom,10);
+              width: 100%;
+              @include ruler(height,120);
+              overflow: hidden;
+              position: absolute;
+              left: 0;
+              bottom: 0;
+              background: rgba(0,0,0,0.5);
+              h5{
+                @include ruler(height,40);
+                overflow: hidden;
+                @include font($f-yahei,18,40,#fff);
+                @include afont(#fff);
+                @include ruler(text-indent,15);
+                @include ruler(padding-right,15);
+              }
+              p{
+                @include height-set();
+                @include font($f-yahei,14,26,#fff);
+                @include afont(#fff);
+                text-indent: 2em;
+                @include ruler(padding-right,15);
+                @include ruler(padding-left,15);
+              }
             }
             img{
               @include ruler(width,980);
@@ -909,6 +945,8 @@
   }
 }
 .mingj{
+  @include height-set();
+  padding-bottom: 20px;
   a{
     text-decoration:none;
   }
@@ -917,36 +955,17 @@
   background:#ebe8de;overflow: hidden;
   .mingl{
     float:left;
-    @media (max-width: 768px) {
-      @include height-set();
-      width:80%;
-      margin-left:10%;
-    }
-    @media (min-width: 769px) {
-      @include height-set();
-      width: 321px;overflow:hidden;margin-top:20px;
-      position:relative;
-      height: 300px;margin-left:19px;margin-bottom: 20px;
-    }
+    @include height-set();
+    width: 321px;overflow:hidden;margin-top:20px;
+    position:relative;
+    height: 300px;margin-left:19px;
     background:#f5f4ef;
     position:relative;
     .minglon{
-      @media (min-width: 769px) {
-
         width:135px;height: 135px;position: absolute;left:87px;top:32px;background:url(http://cms.haiwainet.com.cn/statics/tpl/2015-07-19/images/new1.png) no-repeat;
-      }
     }
     .minglimg{
-      @media (min-width: 769px) {
-        width:135px;height: 135px;padding-left:87px;padding-top:32px;
-      }
-      img{
-        @media (max-width: 768px) {
-          @include height-set();
-          width:80%;
-          margin-left:10%;
-        }
-      }
+      width:135px;height: 135px;padding-left:87px;padding-top:32px;
     }
     h5{
       padding-left:13px;width: 275px;font:bold 18px/35px "MicroSoft YaHei";padding-top:25px;color:#1e1e1e;
@@ -958,8 +977,6 @@
       color:#828282;
       font: 12px/23px "MicroSoft YaHei";
       height: 23px;
-      font: rem(12)/rem(23) "MicroSoft YaHei";
-      height: rem(23);
       overflow: hidden;
       a{color:#828282}
     }
@@ -968,70 +985,34 @@
 
   .mingr{
     float: right;
-    @media (max-width: 768px) {
-      @include height-set();
-      width:80%;
-      margin-left:10%;
-      float: left;
-    }
-    @media (min-width: 769px) {
-      @include height-set();
-      width: 620px;overflow: hidden;padding-top:10px;margin-right: 10px;
-    }
+    @include height-set();
+    width: 620px;overflow: hidden;padding-top:10px;margin-right: 10px;
     ul{
       li{
         display: block;
         background:#f5f4ef;
         position:relative;
-        @media (max-width: 768px) {
-          @include height-set();
-          width:80%;
-          padding:10%;
-          margin-top:0.1rem;
-        }
-        @media (min-width: 769px) {
-          @include height-set();
-          width: 280px;padding:0 10px;height: 145px;margin-top:10px;margin-right:10px;float: left;
-        }
+        @include height-set();
+        width: 280px;padding:0 10px;height: 145px;margin-top:10px;margin-right:10px;float: left;
         .mingr_liimg{
           float:left;
-          @media (min-width: 769px) {
-            width: 105px;height: 105px;padding-left:9px;padding-top:20px;position: relative;
-          }
+          width: 105px;height: 105px;padding-left:9px;padding-top:20px;position: relative;
         }
         .mingron{
-          @media (min-width: 769px) {
-            width:105px;height: 105px;position: absolute;left:9px;top:20px;background:url(http://cms.haiwainet.com.cn/statics/tpl/2015-07-19/images/new2.png) no-repeat;
-          }
+          width:105px;height: 105px;position: absolute;left:9px;top:20px;background:url(http://cms.haiwainet.com.cn/statics/tpl/2015-07-19/images/new2.png) no-repeat;
         }
         .mingrlimg{
-          @media (min-width: 769px) {
             width:105px;height: 105px;
-            img{
-              @media (max-width: 768px) {
-                @include height-set();
-                width:80%;
-                margin-left:10%;
-              }
-            }
-          }
         }
         .mingr_litxt{
           float:right;
-          @media (min-width: 769px) {
-            width: 162px;
-          }
-          @media (max-width: 768px) {
-            float: left;
-          }
+          width: 162px;
           h5{
             font:bold 14px/23px "MicroSoft YaHei";padding-top:15px;
-            font:bold rem(14)/rem(23) "MicroSoft YaHei";padding-top:rem(15);
             a{color:#1e1e1e;}
           }
           p{
             font: 12px/23px "MicroSoft YaHei";color:#828282;
-            font:bold rem(12)/rem(23) "MicroSoft YaHei";
             a{
               color:#828282;
             }
@@ -1052,6 +1033,12 @@
 }
 .mt35{
   @include ruler(margin-top,35);
+}
+.fr{
+  float:right;
+}
+.fl{
+  float: left;
 }
 
 

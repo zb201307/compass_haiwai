@@ -10,6 +10,7 @@
     @include border(4,solid,#ce3531,-top);
     background: #000000;
     overflow: hidden;
+    width: 100%;
     .c{
       @include ruler(widht,980);
       @include ruler(height,46);
@@ -41,6 +42,15 @@
       overflow: hidden;
       @include ruler(text-indent,30);
       @include border(4,solid,#769fc5,-top);
+      a.gd{
+        @include font($f-yahei,14,50);
+        text-decoration: none;
+        float: right;
+        @include ruler(margin-right,10);
+        &:hover,&:active{
+          text-decoration: underline;
+        }
+      }
     }
     .list1{
       .cs{
@@ -104,14 +114,16 @@
           @include afont(#b90c12);
           a.gd{
             @include ruler(height,16);
-            @include font($f-arial,12,16,#fff);
+            @include font($f-arial,12,16,#000);
             float: right;
             @include padding(0,9,0,9);
             display: inline-block;
             @include ruler(margin-top,8);
-            background: #6f6e6d;
             @include ruler(border-radius,2);
             font-weight: 100;
+            a:hover,a:active{
+              text-decoration: underline;
+            }
           }
         }
         .l{
@@ -321,7 +333,7 @@
         h4{
           @include height-set();
           @include font($f-yahei,14,30);
-          @include ruler(margin-top,18);
+          @include ruler(margin-top,8);
           @include afont();
           font-weight: bold;
           a:hover,a:active{
@@ -530,7 +542,9 @@
         }
       }
       .l{
-        @include height-set();
+        @include ruler(height,555);
+        overflow: hidden;
+        overflow-y: scroll;
         @include ruler(width,489);
         @include ruler(padding-bottom,22);
         float: left;
@@ -538,7 +552,9 @@
         background-size: contain;
       }
       .r{
-        @include height-set();
+        @include ruler(height,555);
+        overflow: hidden;
+        overflow-y: scroll;
         @include ruler(width,489);
         @include ruler(padding-bottom,22);
         float: right;
@@ -801,9 +817,29 @@
           ul{
             li{
               div{
-                @include ruler(width,980);
-                @include ruler(left,10);
-                @include ruler(bottom,10);
+                width: 100%;
+                @include ruler(height,90);
+                overflow: hidden;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                background: rgba(0,0,0,0.5);
+                h5{
+                  @include ruler(height,40);
+                  overflow: hidden;
+                  @include font($f-yahei,18,40,#fff);
+                  @include afont(#fff);
+                  @include ruler(text-indent,15);
+                  @include ruler(padding-right,15);
+                }
+                p{
+                  @include height-set();
+                  @include font($f-yahei,14,26,#fff);
+                  @include afont(#fff);
+                  text-indent: 2em;
+                  @include ruler(padding-right,15);
+                  @include ruler(padding-left,15);
+                }
               }
               img{
                 @include ruler(width,980);
@@ -1235,14 +1271,16 @@
           @include afont(#b90c12);
           a.gd{
             @include ruler(height,16);
-            @include font($f-arial,12,16,#fff);
+            @include font($f-arial,12,16,#000);
             float: right;
             @include padding(0,9,0,9);
             display: inline-block;
             @include ruler(margin-top,8);
-            background: #6f6e6d;
             @include ruler(border-radius,2);
             font-weight: 100;
+            &:hover,&:active{
+              text-decoration: underline;
+            }
           }
         }
         .l{
@@ -1448,7 +1486,7 @@
         h4{
           @include height-set();
           @include font($f-yahei,14,30);
-          @include ruler(margin-top,18);
+          @include ruler(margin-top,8);
           @include afont();
           font-weight: bold;
           a:hover,a:active{
@@ -1657,7 +1695,9 @@
         }
       }
       .l{
-        @include height-set();
+        @include ruler(height,555);
+        overflow: hidden;
+        overflow-y: scroll;
         width: 100%;
         @include ruler(padding-bottom,22);
         float: left;
@@ -1665,7 +1705,9 @@
         background-size: contain;
       }
       .r{
-        @include height-set();
+        @include ruler(height,555);
+        overflow: hidden;
+        overflow-y: scroll;
         width: 100%;
         @include ruler(padding-bottom,22);
         float: right;
@@ -1918,15 +1960,38 @@
           overflow: hidden;
           ul{
             li{
-              div{
-                width: 100%;
-                @include ruler(left,10);
-                @include ruler(bottom,10);
-              }
+              @include height-set();
+              position: relative;
               img{
                 width: 100%;
                 @include ruler(height,565);
               }
+              div{
+                width: 100%;
+                @include ruler(height,120);
+                overflow: hidden;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                background: rgba(0,0,0,0.5);
+                h5{
+                  @include ruler(height,40);
+                  overflow: hidden;
+                  @include font($f-yahei,18,40,#fff);
+                  @include afont(#fff);
+                  @include ruler(text-indent,15);
+                  @include ruler(padding-right,15);
+                }
+                p{
+                  @include height-set();
+                  @include font($f-yahei,14,26,#fff);
+                  @include afont(#fff);
+                  text-indent: 2em;
+                  @include ruler(padding-right,15);
+                  @include ruler(padding-left,15);
+                }
+              }
+
             }
           }
         }
@@ -2388,9 +2453,29 @@
 
 }
 
+.gds{
+  @include ruler(height,20);
+  @include font($f-yahei,12,20,#000);
+  @include afont();
+  a:hover,a:active{
+    text-decoration: underline;
+  }
+  a{
+    float: right;
+    @include ruler(margin-right,20);
+    display: inline-block;
+  }
 
+
+}
 
 .pb20{@include padding(0,0,20,0);}
+.mt5{
+  @include ruler(margin-top,5);
+}
+.mt10{
+  @include ruler(margin-top,10);
+}
 .mt20{
   @include ruler(margin-top,20);
 }
