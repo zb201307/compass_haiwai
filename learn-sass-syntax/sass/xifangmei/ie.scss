@@ -68,7 +68,7 @@
           }
         }
         a{
-          @include ruler(width,106);
+          @include ruler(width,92);
           @include ruler(height,32);
           @include font($f-yahei,16,32,#000);
           overflow: hidden;
@@ -86,6 +86,10 @@
         @include ruler(height,48);
         float: left;
       }
+    }
+    .cs{
+      @include height-set();
+      display: none;
     }
     .c{
       width: 100%;
@@ -490,6 +494,7 @@
         a{
           @include ruler(width,114);
           @include ruler(height,38);
+          float: left;
           overflow: hidden;
           display: inline-block;
           text-align: center;

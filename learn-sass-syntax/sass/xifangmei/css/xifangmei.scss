@@ -43,6 +43,10 @@
       @include border(4,solid,#769fc5,-top);
     }
     .list1{
+      .cs{
+        @include height-set();
+        display: none;
+      }
       .navt{
         @include ruler(height,48);
         @include ruler(padding-top,17);
@@ -69,7 +73,7 @@
             }
           }
           a{
-            @include ruler(width,106);
+            @include ruler(width,92);
             @include ruler(height,32);
             @include font($f-yahei,16,32,#000);
             overflow: hidden;
@@ -491,6 +495,7 @@
           a{
             @include ruler(width,114);
             @include ruler(height,38);
+            float: left;
             overflow: hidden;
             display: inline-block;
             text-align: center;
